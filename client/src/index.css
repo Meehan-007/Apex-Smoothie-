@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0, 75px, 0, 75px;
+} 
+
+/* Typography */ 
+
+h1 { 
+  font-size: 64px; 
+  font-weight: bold; 
+}  
+
+h2 { 
+  font-size: 36px;
+} 
+
+h3 { 
+  font-size: 28px;
+}  
+
+h4 { 
+  font-size: 24px;  
+  text-transform: capitalize; 
+  letter-spacing: 6%;
+} 
+
+h5 { 
+  font-size: 20px;
+}  
+
+h6 { 
+  font-size: 16px; 
+  font-weight: bold; 
+}   
+
+
+p { 
+  font-size: 16px;
+} 
+
+/* colors */ 
+
+:root {
+  --primary-color: E50914; 
+  --white: FFFFFF; 
+  --text-font-color: 000000;
+} 
+
+.bg-red {
+  background-color: var(--primary-color);
+} 
+
+.color-red {
+  color: var(--primary-color);
+}
+
+/* spacing */ 
+
+.margin-top-S{
+  margin-top: 16px;
+} 
+
+.margin-top-M{
+  margin-top: 24px;
+} 
+
+.margin-top-L{
+  margin-top: 32px;
+} 
+
+.margin-top-XL{
+  margin-top: 64px;
+} 
+
+.margin-top-XXL{
+  margin-top: 96px;
+}
+
+/* rows and columns and flex */ 
+
+.space_between {
+  display: flex; 
+  justify-content: space-between;
+} 
+
+.space_evenly {
+  display: flex; 
+  justify-content: space-evenly;
+} 
+
+.space_evenly-yaxis {
+  display: flex; 
+  align-content: space-evenly;
+}  
+
+.space_between-yaxis {
+  display: flex; 
+  align-content: space-between;
+}  
+
+.space_center {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center; 
+} 
+
+.col {
+  display: flex; 
+  flex-direction: column;
+} 
+
+.row {
+  display: flex;
+}
+
