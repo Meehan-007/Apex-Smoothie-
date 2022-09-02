@@ -23,17 +23,12 @@ h3 {
 h4 { 
   font-size: 24px;  
   text-transform: capitalize; 
-  letter-spacing: 6%;
+  letter-spacing: 6%; 
 } 
 
 h5 { 
   font-size: 20px;
 }  
-
-h6 { 
-  font-size: 16px; 
-  font-weight: bold; 
-}   
 
 
 p { 
@@ -43,17 +38,30 @@ p {
 /* colors */ 
 
 :root {
-  --primary-color: E50914; 
-  --white: FFFFFF; 
-  --text-font-color: 000000;
+  --primary-color: #E50914; 
+  --white: #FFFFFF; 
+  --linkcolor: #0F0BE6; 
+  --fadeout: #ACAAAA;
 } 
 
 .bg-red {
   background-color: var(--primary-color);
-} 
+}  
+
+.bg-lightred{
+  background: rgba(157, 42, 30, 0.04);
+}
 
 .color-red {
   color: var(--primary-color);
+} 
+
+.color-link{
+  color: var(--linkcolor);
+} 
+
+.fadeout {
+  color: var(--fadeout);
 }
 
 /* spacing */ 
@@ -77,6 +85,19 @@ p {
 .margin-top-XXL{
   margin-top: 96px;
 }
+
+.padding-S{
+  padding: 16px;
+}  
+
+.padding-M{
+  padding: 24px;
+}  
+
+.padding-L{
+  padding: 32px;
+} 
+
 
 /* rows and columns and flex */ 
 
@@ -107,6 +128,11 @@ p {
   align-content: center; 
 } 
 
+.flex-start {
+  display: flex; 
+  align-items: flex-start;
+}
+
 .col {
   display: flex; 
   flex-direction: column;
@@ -116,3 +142,104 @@ p {
   display: flex;
 }
 
+/* border radius */ 
+
+.circle{
+  border-radius: 90px;
+}
+
+
+
+
+/*   Components   */ 
+
+
+/*   Button      */ 
+.buttonSmall {
+  background-color: var(--primary-color); 
+  width: 104px; 
+  height: 52px; 
+  border-radius: 90px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+} 
+
+.buttonMedium { 
+  background-color: var(--primary-color); 
+  width: 142px; 
+  height: 53px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+}  
+
+.buttonMediumSecondary { 
+  background-color: var(--white); 
+  color: var(--primary-color); 
+  border-color: var(--primary-color);
+  width: 142px; 
+  height: 53px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+}  
+
+.buttonLarge { 
+  background-color: var(--primary-color); 
+  width: 310px; 
+  height: 53px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+} 
+
+.buttonLargeSecondary { 
+  background-color: var(--white); 
+  color: var(--primary-color); 
+  border-color: var(--primary-color);
+  width: 310px; 
+  height: 53px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+}  
+ 
+
+.buttonLargeWhite { 
+  background-color: var(--white); 
+  border-color: black;
+  width: 310px; 
+  height: 53px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center;
+}  
+
+
+
+/* forms  */
+
+.stroke{ 
+  stroke: #C7C7C7; 
+  stroke-width: 1px;
+} 
+
+.border{
+  width:125px; 
+  height:0px; 
+  border: 1px solid #E5E5E5;
+}
+
+/* text overlay */ 
+
+.textglass {
+  background: rgba(0, 0, 0, 0.32); 
+  height: 100px; 
+  backdrop-filter: blur(44px); /* has minimal browser support test it before using */ 
+  text-align: center;
+} 
+
+.imageoverlay {
+  background: rgba(0, 0, 0, 0.22);
+}
