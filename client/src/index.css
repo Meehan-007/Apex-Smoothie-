@@ -1,39 +1,66 @@
-body {
-  margin: 0;
-  padding: 0;  
+*{
+  margin: 0; 
+  padding: 0;
+}
+
+body { 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 0, 75px, 0, 75px;
-} 
+  font-weight: 400;
+  line-height: 1.5;
+}  
+
+html,
+body {
+  min-height: 100%;
+}
 
 /* Typography */ 
 
 h1 { 
-  font-size: 64px; 
-  font-weight: bold; 
+  font-size: 3rem; 
+  font-weight: bold;    
+  line-height: 1;     
+  /* why did margin 0 solve it?? */
 }  
 
 h2 { 
-  font-size: 36px;
+  font-size: 2.25rem;
 } 
 
 h3 { 
-  font-size: 28px;
+  font-size: 1.75rem;
 }  
 
 h4 { 
-  font-size: 24px;  
-  text-transform: capitalize; 
-  letter-spacing: 6%; 
+  font-size: 1.5rem;  
+  text-transform: uppercase; 
+  letter-spacing: 11%;  
 } 
 
 h5 { 
-  font-size: 20px;
+  font-size: 1.25rem;
 }  
 
 
 p { 
-  font-size: 16px;
+  font-size: 1rem;
+}     
+
+.bold {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none; 
+  color: black; 
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: var(--primary-color);
 } 
+
+
 
 /* colors */ 
 
@@ -41,7 +68,13 @@ p {
   --primary-color: #E50914; 
   --white: #FFFFFF; 
   --linkcolor: #0F0BE6; 
-  --fadeout: #ACAAAA;
+  --fadeout: #ACAAAA; 
+  --spacingone: 1rem ;
+  --spacingtwo: 1.5rem; 
+  --spacingthree: 2rem; 
+  --spacingfour: 3rem; 
+  --spacingfive: 4rem; 
+  --spacingsix: 6rem; 
 } 
 
 .bg-red {
@@ -67,47 +100,125 @@ p {
 /* spacing */ 
 
 .margin-top-S{
-  margin-top: 16px;
+  margin-top: var(--spacingone);
 } 
 
 .margin-top-M{
-  margin-top: 24px;
+  margin-top: var(--spacingtwo);
 } 
 
 .margin-top-L{
-  margin-top: 32px;
+  margin-top: var(--spacingthree)
 } 
 
 .margin-top-XL{
-  margin-top: 64px;
+  margin-top: var(--spacingfive);
 } 
 
 .margin-top-XXL{
-  margin-top: 96px;
+  margin-top: var(--spacingsix);
+}
+
+
+
+.margin-left-S{
+  margin-left: var(--spacingone);
+} 
+
+.margin-left-M{
+  margin-left: var(--spacingtwo);
+} 
+
+.margin-left-L{
+  margin-left: var(--spacingthree)
+} 
+
+.margin-left-XL{
+  margin-left: var(--spacingfive);
+} 
+
+.margin-left-XXL{
+  margin-left: var(--spacingsix);
+} 
+
+.pagemarginright{ 
+  margin-Right: 5%
+} 
+
+.pagemarginleft {
+  margin-left: 5%;
 }
 
 .padding-S{
-  padding: 16px;
+  padding: var(--spacingone);
 }  
 
 .padding-M{
-  padding: 24px;
+  padding: var(--spacingtwo);
 }  
 
 .padding-L{
-  padding: 32px;
+  padding: var(--spacingthree);
+}  
+
+.paddingbottom{ 
+  padding-bottom: var(--spacingfour);
+}
+ 
+.gapS {
+  gap: 1rem;
 } 
+
+.gapM {
+  gap: 2rem;
+}
+
+
+/* HEIGHT / WIDTH UTILS */
+
+.widthauto {
+  width: auto;
+}
+.w-100 {
+  width: 100%;
+} 
+
+.w-90 {
+  width: 90%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.min-100-vh {
+  min-height: 100vh;
+}
+
+.min-100-vw {
+  min-width: 100vw;
+}
 
 
 /* rows and columns and flex */ 
 
+.textcenter {
+  text-align: center;
+}
+
 .space_between {
-  display: flex; 
   justify-content: space-between;
 } 
 
 .space_evenly {
-  display: flex; 
   justify-content: space-evenly;
 } 
 
@@ -124,9 +235,24 @@ p {
 .space_center {
   display: flex; 
   justify-content: center; 
-  align-items: center; 
+   align-items: center;  
   align-content: center; 
-} 
+}  
+
+.center {
+  display: flex; 
+  align-items: center;
+}  
+
+.colcenter {
+  align-content: center;
+}
+
+.left { 
+  align-content: flex-start;
+  align-items: flex-start; 
+  justify-content: flex-start;
+}
 
 .flex-start {
   display: flex; 
@@ -140,6 +266,56 @@ p {
 
 .row {
   display: flex;
+} 
+
+/* column width */ 
+
+.col-1 {
+  flex: 0 0 calc(100% * 1 / 12 - 0.5%);
+}
+
+.col-2 {
+  flex: 0 0 calc(100% * 2 / 12 - 0.5%);
+}
+
+.col-3 {
+  flex: 0 0 calc(100% * 3 / 12 - 0.5%);
+}
+
+.col-4 {
+  flex: 0 0 calc(100% * 4 / 12 - 0.5%);
+}
+
+.col-5 {
+  flex: 0 0 calc(100% * 5 / 12 - 0.5%);
+}
+
+.col-6 {
+  flex: 0 0 calc(100% * 6 / 12 - 0.5%);
+}
+
+.col-7 {
+  flex: 0 0 calc(100% * 7 / 12 - 0.5%);
+}
+
+.col-8 {
+  flex: 0 0 calc(100% * 8 / 12 - 0.5%);
+}
+
+.col-9 {
+  flex: 0 0 calc(100% * 9 / 12 - 0.5%);
+}
+
+.col-10 {
+  flex: 0 0 calc(100% * 10 / 12 - 0.5%);
+}
+
+.col-11 {
+  flex: 0 0 calc(100% * 11 / 12 - 0.5%);
+}
+
+.col-12 {
+  flex: 0 0 100%;
 }
 
 /* border radius */ 
@@ -157,21 +333,27 @@ p {
 /*   Button      */ 
 .buttonSmall {
   background-color: var(--primary-color); 
+  color: var(--white);
   width: 104px; 
-  height: 52px; 
+  height: 45px; 
   border-radius: 90px; 
   font-size: 16px; 
   font-weight: bold; 
-  text-align: center;
+  text-align: center; 
+  border-width: 0; 
+  border-style: none;
 } 
 
 .buttonMedium { 
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);  
+  color: var(--white);
   width: 142px; 
   height: 53px; 
   font-size: 16px; 
   font-weight: bold; 
-  text-align: center;
+  text-align: center; 
+  border-width: 0; 
+  border-style: none;
 }  
 
 .buttonMediumSecondary { 
@@ -186,12 +368,15 @@ p {
 }  
 
 .buttonLarge { 
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);  
+  color: var(--white);
   width: 310px; 
   height: 53px; 
   font-size: 16px; 
   font-weight: bold; 
-  text-align: center;
+  text-align: center; 
+  border-width: 0; 
+  border-style: none;
 } 
 
 .buttonLargeSecondary { 
@@ -202,21 +387,47 @@ p {
   height: 53px; 
   font-size: 16px; 
   font-weight: bold; 
-  text-align: center;
+  text-align: center; 
+  
 }  
  
 
 .buttonLargeWhite { 
-  background-color: var(--white); 
+  background-color: var(--white);  
+  color: var(--white);
   border-color: black;
   width: 310px; 
   height: 53px; 
   font-size: 16px; 
   font-weight: bold; 
-  text-align: center;
+  text-align: center; 
+  
 }  
 
 
+.imagesize_small {
+  width: 24px; 
+  height: auto;
+}
+
+.imagesize_large {
+  width: 52px; 
+  height: auto;
+} 
+
+.portrait {
+  width: 400px; 
+  height: auto;
+} 
+
+.imagesize_cover {
+  width: 300px; 
+  height: auto; 
+}  
+
+.backgroundcover {
+  width: 100%;
+}
 
 /* forms  */
 
@@ -242,4 +453,24 @@ p {
 
 .imageoverlay {
   background: rgba(0, 0, 0, 0.22);
+}  
+
+.overflow {
+  overflow-x: scroll;
+} 
+
+.shadow {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.test {
+  background-color: #0F0BE6;
+} 
+
+.test1 {
+  background-color: pink;
+} 
+
+.test2 {
+  background-color: orange;
 }
