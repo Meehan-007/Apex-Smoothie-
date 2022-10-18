@@ -7,7 +7,6 @@ import Header from './components/Nav';
 import Home from './pages/Home'; 
 import About from './pages/About'; 
 import Account from './pages/Account'; 
-import ForgotPassword from './pages/ForgotPassword'; 
 import Ingredients from './pages/Ingredients'; 
 import Menu from './pages/Menu';  
 import Rewards from './pages/Rewards'; 
@@ -34,10 +33,6 @@ function App() {
       <Route 
         path="/about" 
         element={<About />} 
-      /> 
-      <Route 
-        path="/forgotpassword" 
-        element={<ForgotPassword />} 
       /> 
       <Route 
         path="/ingrediets" 
