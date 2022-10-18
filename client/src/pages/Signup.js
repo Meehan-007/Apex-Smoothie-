@@ -1,59 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
 
 import logo from '../assests/logo.png' 
-import search from '../assests/Search.jpg' 
-import profile_icon from '../assests/profile.png' 
+import apple from '../assests/.root/apple.jpg'  
+import google from '../assests/.root/google.jpg'  
+import facebook from '../assests/.root/Vector.jpg' 
+ 
 
-//import Auth from '../utils/Auth'; 
 
-const Header = () => {
-  //  const logout = event => {
-  //    event.preventDefault();
-  //    Auth.logout();
-  //  };
+function MyForm2() {
+  
+ 
   
     return (
-      <header className="space_center">
-        <div className="space_between center w-100">
-          <Link to="/">
-            <img src={logo} alt="logo"/>
-          </Link>
-  
-          <nav className="col-3 space_evenly"> 
+      <section className='margin-top-XXL col center w-100 paddingbottom'> 
+        
+     <form className="col space_evenly center border1" style={{ height: 800, width: 400 }}>  
 
-          <Link to="/menu">
-            <h3> Menu </h3>
-          </Link> 
-          <Link to="/rewards">
-          <h3> Rewards </h3>
-          </Link> 
-          <Link to="/about">
-          <h3> About </h3>
-          </Link> 
-          <img src={search} alt="search"/>
+     <img className="imagesize_large" src={logo} alt="logo" />
+       <label className='col margin-top-M'>Email<input className='w-100 margin-top-S' style={{ width: 310, height: 45 }} type="text" name="name" /> </label> 
+      
+       
+       <input className='buttonLarge' type="submit" value="Next" />
+       
 
-          </nav> 
-          <div> 
-                 {/* {Auth.loggedIn() ? (
-              <>
-                <Link to="/account">
-                    <img src={profile_icon} alt="account icon"/>
-                    </Link>
-                
-              </>
-            ) : (
-       //       <> */}
-                <Link to="/login"><h3>Login</h3></Link>
-                <Link to="/signup">
-                    <button className='buttonSmall'>Signup</button> 
-                    </Link>
-              {/* </> */}
-            {/* )}  */}
-            </div>
-        </div>
-      </header>
-    );
-  };
+       <section className='row space_between center' style={{ width: 310}}> 
+       
+       <div className='hr' style={{ width: 120}}/>
+       
+        <p> or </p> 
+       <div className='hr' style={{ width: 120}}/>
+       
+
+        </section>
+
+       <div className='col'> 
+       <button className='buttonLargeWhite row space_evenly center'> <img className="imagesize_small" src={google} alt="google icon" /> Sign up with Google </button> 
+     <button className='buttonLargeWhite row space_evenly center margin-top-M'> <img className="imagesize_facebook" src={facebook} alt="facebook icon" /> Sign up with Facebook</button> 
+     <button className='buttonLargeWhite row space_evenly center margin-top-M'> <img className="imagesize_small" src={apple} alt="Apple icon" /> Signup with Apple </button> 
+     </div>
+
+     
+     </form>  
+     </section>
+      ) 
+  }; 
+
   
-  export default Header;
+  export default MyForm2;
