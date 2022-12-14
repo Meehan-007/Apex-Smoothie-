@@ -12,7 +12,7 @@ const about = () => {
     return ( 
 
        <>
-      <img className="backgroundcover margin-top-M" src={aboutcover} alt="smoothie" /> 
+      <img className="w-100 margin-top-M" src={aboutcover} alt="smoothie" /> 
       <div className='pagemarginleft pagemarginright paddingbottom'> 
       <h1 className='textcenter margin-top-XL'> About us </h1> 
       

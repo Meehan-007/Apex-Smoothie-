@@ -1,59 +1,76 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
-
-import logo from '../assests/logo.png' 
-import search from '../assests/Search.jpg' 
-import profile_icon from '../assests/profile.png' 
 
 //import Auth from '../utils/Auth'; 
 
-const Header = () => {
-  //  const logout = event => {
-  //    event.preventDefault();
-  //    Auth.logout();
-  //  };
-  
-    return (
-      <header className="space_center">
-        <div className="space_between center w-100">
-          <Link to="/">
-            <img src={logo} alt="logo"/>
-          </Link>
-  
-          <nav className="col-3 space_evenly"> 
+const Ingredients2 = () => {
+ 
+   return ( 
+    <section className='paddingbottom'> 
+    <div className="backgroundcover1 space_center"> 
+     <div id='coveringred' className='space_center'><h1 className='white'> Ingredients</h1> </div>
+    </div>  
 
-          <Link to="/menu">
-            <h3> Menu </h3>
-          </Link> 
-          <Link to="/rewards">
-          <h3> Rewards </h3>
-          </Link> 
-          <Link to="/about">
-          <h3> About </h3>
-          </Link> 
-          <img src={search} alt="search"/>
+    <section className='pagemarginleft pagemarginright space_center col margin-top-M'> 
+       
+       <div className='col margin-top-XL'> 
+       <h2> Ingredient item </h2>
+       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div> 
 
-          </nav> 
-          <div> 
-                 {/* {Auth.loggedIn() ? (
-              <>
-                <Link to="/account">
-                    <img src={profile_icon} alt="account icon"/>
-                    </Link>
-                
-              </>
-            ) : (
-       //       <> */}
-                <Link to="/login"><h3>Login</h3></Link>
-                <Link to="/signup">
-                    <button className='buttonSmall'>Signup</button> 
-                    </Link>
-              {/* </> */}
-            {/* )}  */}
-            </div>
-        </div>
-      </header>
-    );
-  };
-  
-  export default Header;
+       <div className='col margin-top-XL'> 
+       <h2> Ingredient item </h2>
+       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>  
+
+      <div className='col margin-top-XL'> 
+       <h2> Ingredient item </h2>
+       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>  
+
+       <div className='col margin-top-XL'> 
+       <h2> Ingredient item </h2>
+       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>  
+
+       <div className='col margin-top-XL'> 
+       <h2> Ingredient item </h2>
+       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         et dolore magna aliqua. Ut enim ad minim veniam, 
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div> 
+
+    </section> 
+    </section> 
+
+
+
+//   <section className='col paddingbottom'>  
+
+// <div className='space_center'> 
+// <HeroCover2/> 
+// </div>  
+// <div className='pagemarginleft pagemarginright'> 
+// <h4> Ingredients </h4> 
+// <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+//   labore et dolore magna aliqua. 
+//    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+//    commodo consequat. Duis aute irure dolor in</p> 
+//    <Link to="/ingredients"> Want to learn where we source our Ingredients? </Link> 
+// </div> 
+// <h1 className='margin-top-XXL pagemarginleft pagemarginright'> Nutrition Info </h1>  
+// <SmoothieFooter/> 
+// </section> 
+
+
+  );
+};
+
+export default Ingredients2;

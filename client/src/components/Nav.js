@@ -14,13 +14,14 @@ const Header = () => {
   //  };
   
     return (
-      <header className="space_center col-12 pagemarginleft pagemarginright margin-top-L">
-        <div className="space_between center w-100">
-          <Link to="/">
+      <header className=" row space_between col-12 margin-top-S margin-bottom-S pagemarginleft pagemarginright">
+        <div className="col-1 space_center">
+          <Link to="/" id='a-0'>
             <img className="imagesize_large" src={logo} alt="logo"/>
           </Link>
-  
-          <nav className="col-3 space_evenly center"> 
+          </div>  
+          <div className='col-3'> </div>
+          <nav className="col-4 space_evenly center"> 
 
           <Link to="/menu">
              Menu 
@@ -33,8 +34,9 @@ const Header = () => {
           </Link> 
           <img className="imagesize_small" src={search} alt="search"/>
 
-          </nav> 
-          <div className='width-auto row center'> 
+          </nav>  
+          <div className='col-2'> </div>
+          <div className='col-1 row center auto-width'> 
                  {/* {Auth.loggedIn() ? (
               <>
                 <Link to="/account">
@@ -51,7 +53,7 @@ const Header = () => {
               {/* </> */}
             {/* )}  */}
             </div>
-        </div>
+        
       </header>
     );
   };

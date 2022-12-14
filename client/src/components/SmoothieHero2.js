@@ -1,10 +1,10 @@
 import React from 'react';
 import hero from '../assests/smoothieorange.jpg' 
-
+import { Link } from 'react-router-dom'; 
 
 //import Auth from '../utils/Auth'; 
 
-const HeroCover2 = () => {
+const heroCover2 = () => {
   
   
     return (
@@ -16,8 +16,8 @@ const HeroCover2 = () => {
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
                culpa qui officia deserunt mollit anim id est laborum. </p> 
-            <button className="buttonLarge margin-top-M"> Learn More </button> 
-            
+           <Link to="/SmoothieInfo"> <button className="buttonLarge margin-top-M"> Learn More </button> </Link>
+          
         </div> 
 
 
@@ -31,4 +31,4 @@ const HeroCover2 = () => {
     );
   };
   
-  export default HeroCover2;
+  export default heroCover2;

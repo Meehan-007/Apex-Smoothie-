@@ -35,7 +35,7 @@ function App() {
         element={<About />} 
       /> 
       <Route 
-        path="/ingrediets" 
+        path="/ingredients" 
         element={<Ingredients />} 
       /> 
       <Route 
@@ -55,7 +55,7 @@ function App() {
         element={<Rewards />} 
       /> 
       <Route 
-        path="/SmoothieInfo" 
+        path="/smoothieInfo" 
         element={<SmoothieInfo />} 
       />
       <Route 
