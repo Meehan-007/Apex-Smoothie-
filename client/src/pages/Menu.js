@@ -20,12 +20,22 @@ const Menu = () => {
     <div className='margin-top-XL'> 
       <SecondaryNavigation/>
     </div>
-  <h4 className='margin-top-XL pagemarginleft'> Specials </h4> 
-  <div className='margin-top-M row  pagemarginleft gapM overflow'> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> </div>
-  <h4 className='margin-top-XL pagemarginleft'> Specials </h4>  
-  <div className='margin-top-M row pagemarginleft gapM overflow'> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> </div>
-  <h4 className='margin-top-XL pagemarginleft'> Specials </h4> 
-  <div className='margin-top-M row pagemarginleft gapM overflow'> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> <img className="imagesize_cover" src={Smoothiecover2} alt="smoothie" /> </div> 
+    <section className='space_center col flexclear pagemarginleft pagemarginleft-tablet marginreset '> 
+
+    <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+   <div className='gapM margin-top-M row flexwrap mobile-col mobile-center mobile-w-100'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
+  </div> 
+
+  
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+  <div className=' margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div>
+  </div>  
+
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
+  </div>  
+  
+  </section>
   </section>
     );
 };

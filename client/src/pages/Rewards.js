@@ -17,21 +17,37 @@ const Rewards = () => {
 
       <section className='pagemarginleft pagemarginright space_center col margin-top-XL'> 
          <h1> reward perks </h1> 
-         <div className='row margin-top-XL space_center'> 
+         <div className='row margin-top-XL space_center mobile-col'> 
          <img className="portrait2 circle shadow" src={smoothie1} alt="smoothie" />  
-         <p className='w-50 margin-left-XXL'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         <p className='w-50 margin-left-XXL mobile-w-100 marginreset mobile-margin-top'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
            et dolore magna aliqua. Ut enim ad minim veniam, 
            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         </div> 
-         <div className='row margin-top-XL space_center'>  
-         <p className='w-50 '> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         </div>  
+
+
+         
+         <div className='row margin-top-XL space_center mobile-col mobile-hide'>  
+         <p className='w-50 mobile-w-100 marginreset mobile-margin-top'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
            et dolore magna aliqua. Ut enim ad minim veniam, 
            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          <img className="portrait2 circle shadow margin-left-XXL" src={smoothie2} alt="smoothie" />  
-         </div> 
-         <div className='row margin-top-XL space_center'> 
+         </div>  
+
+
+
+         <div className='row margin-top-XL space_center mobile-col web-none mobile-show'> 
+         <img className="portrait2 circle shadow" src={smoothie2} alt="smoothie" />  
+         <p className='w-50 margin-left-XXL mobile-w-100 marginreset mobile-margin-top'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+           et dolore magna aliqua. Ut enim ad minim veniam, 
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         </div>
+
+
+
+
+         <div className='row margin-top-XL space_center mobile-col'> 
          <img className="portrait2 circle shadow" src={smoothie3} alt="smoothie" />  
-         <p className='w-50 margin-left-XXL'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+         <p className='w-50 margin-left-XXL mobile-w-100 marginreset mobile-margin-top'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
            et dolore magna aliqua. Ut enim ad minim veniam, 
            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          </div>

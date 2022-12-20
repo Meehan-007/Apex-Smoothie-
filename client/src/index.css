@@ -34,7 +34,7 @@ h3 {
 h4 { 
   font-size: 1.5rem;  
   text-transform: uppercase; 
-  letter-spacing: 11%;  
+  letter-spacing: 3px;  
 } 
 
 h5 { 
@@ -60,6 +60,10 @@ a:hover {
   color: var(--primary-color);
 } 
 
+header {
+  background-color: var(--white); 
+  box-shadow: 0 4px 7px rgba(0, 0, 0, .5);
+}
 
 
 /* colors */ 
@@ -157,8 +161,23 @@ a:hover {
   margin-left: 5%;
 }
 
+.paddingright{ 
+  padding-Right: 5%
+} 
+
+.paddingleft {
+  padding-left: 5%;
+} 
+
 .padding-S{
   padding: var(--spacingone);
+}   
+
+.padding-top-S{
+  padding-top: var(--spacingone);
+}  
+.padding-bottom-S{
+  padding-bottom: var(--spacingone);
 }  
 
 .padding-M{
@@ -182,44 +201,20 @@ a:hover {
 }
 
 
-/* HEIGHT / WIDTH UTILS */
 
-.widthauto {
-  width: auto;
-}
-.w-100 {
-  width: 100%;
-} 
-
-.w-90 {
-  width: 90%;
-}
-
-.w-75 {
-  width: 75%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-25 {
-  width: 25%;
-}
-
-.min-100-vh {
-  min-height: 100vh;
-}
-
-.min-100-vw {
-  min-width: 100vw;
-}
 
 
 /* rows and columns and flex */ 
 
 .textcenter {
   text-align: center;
+} 
+
+.web-none {
+  display: none;
+}
+.flexwrap {
+  flex-wrap: wrap;
 }
 
 .space_between {
@@ -272,7 +267,16 @@ a:hover {
 .flex-start {
   display: flex; 
   align-items: flex-start;
+} 
+
+.bottomofcol { 
+  display: flex;
+  align-content: flex-end; 
+  align-items: flex-end; 
+  justify-content: flex-end;
 }
+
+
 
 .col {
   display: flex; 
@@ -473,6 +477,52 @@ a:hover {
 
 /* linear-gradient(rgba(177, 175, 177, 0.8), rgb(177, 175, 177, 0.8)), */ 
 
+
+
+/* HEIGHT / WIDTH UTILS */
+
+.widthauto {
+  width: auto;
+}
+.w-100 {
+  width: 100%;
+} 
+
+.w-90 {
+  width: 90%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+} 
+
+.w-20 {
+  width: 20%;
+}
+
+.min-100-vh {
+  min-height: 100vh;
+}
+
+.min-100-vw {
+  min-width: 100vw;
+} 
+
+.heightfit {
+  height: fit-content;
+} 
+
+.h-100 {
+  height: 100%;
+} 
 /* forms  */
 
 .stroke{ 
@@ -520,16 +570,14 @@ height: 1px;
 color: rgb(102, 102, 102); /* old IE */ 
 background-color: #333;
 }
-.overflow {
-  overflow-x: scroll;
-}  
+
 
 #coveringred {
-  position: absolute;
+  display: flex; 
+  align-content: flex-end;
 width: 100%;
 height: 98px;
-left: 0px;
-top: 414px; 
+z-index: 5; 
 background: rgba(0, 0, 0, 0.32);
 backdrop-filter: blur(22px);
 } 
@@ -552,4 +600,268 @@ backdrop-filter: blur(22px);
 
 .test2 {
   background-color: orange;
+} 
+
+
+#card1 {
+ width: 250px; 
+ 
 }
+#card2 {
+  padding-top: 0; 
+} 
+
+#card1 img {
+  height: 45%;
+} 
+
+
+.icon-size {
+  width: 40px; 
+  height:40px; 
+}
+@media screen and (max-width: 900px) {  
+
+  
+  /* column width */ 
+
+.tabletL-col-1 {
+  flex: 0 0 calc(100% * 1 / 12 - 0.5%);
+}
+
+.tabletL-col-2 {
+  flex: 0 0 calc(100% * 2 / 12 - 0.5%);
+}
+
+.tabletL-col-3 {
+  flex: 0 0 calc(100% * 3 / 12 - 0.5%);
+}
+
+.tabletL-col-4 {
+  flex: 0 0 calc(100% * 4 / 12 - 0.5%);
+}
+
+.tabletL-col-5 {
+  flex: 0 0 calc(100% * 5 / 12 - 0.5%);
+}
+
+.tabletL-col-6 {
+  flex: 0 0 calc(100% * 6 / 12 - 0.5%);
+}
+
+.tabletL-col-7 {
+  flex: 0 0 calc(100% * 7 / 12 - 0.5%);
+}
+
+.tabletL-col-8 {
+  flex: 0 0 calc(100% * 8 / 12 - 0.5%);
+}
+
+.tabletL-col-9 {
+  flex: 0 0 calc(100% * 9 / 12 - 0.5%);
+}
+
+.tabletL-col-10 {
+  flex: 0 0 calc(100% * 10 / 12 - 0.5%);
+}
+
+.tabletL-col-11 {
+  flex: 0 0 calc(100% * 11 / 12 - 0.5%);
+}
+
+.tabletL-col-12 {
+  flex: 0 0 100%;
+} 
+
+.test3 {
+  background-color: rgb(202, 27, 27);
+} 
+
+.TabletL-w-100 {
+  width: 100%;
+} 
+
+.TabletL-w-90 {
+  width: 90%;
+}
+
+.TabletL-w-75 {
+  width: 75%;
+}
+
+.TabletL-w-50 {
+  width: 50%;
+}
+
+.TabletL-w-25 {
+  width: 25%;
+}
+
+.Tablet-overflow {
+  overflow-x: scroll;
+}    
+
+.flexclear { 
+  align-items: flex-start; 
+} 
+.pagemarginleft-tablet {
+  margin-left: 5%;
+} 
+
+.padding-left {
+  padding-left: 2px;
+} 
+.overflow {
+  overflow-x: scroll;
+}   
+
+.overflowparent {
+  width: 800px;
+}    
+
+#card2 {
+  line-height: 1.2; 
+}
+
+}  
+
+
+@media screen and (max-width: 850px) {  
+  .overflowparent {
+    width: 750px; 
+  }  
+  .tablet-none {
+    display: none;
+  } 
+  .tablet-show {
+    display: block;
+  } 
+  #card1 {
+    width:200px ; 
+  } 
+
+  #card1 img {
+    height: 40%;
+  }
+} 
+
+@media screen and (max-width: 750px) {  
+  .TabletS-w-100 {
+    width: 100%;
+  }  
+  .TabletS-w-90 {
+    width: 90%;
+  } 
+  .TabletS-none {
+    display: none;
+  } 
+  .TabletS-show {
+    display: flex;
+  } 
+
+  /* sidebar Nav */
+
+.navBar {
+  /*position: relative;*/ 
+  position: fixed; 
+  z-index: 10; 
+}  
+
+.navBar button { 
+  background: transparent;;
+  border: none; 
+  z-index: 10;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: rgb(44, 44, 44);
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 100%;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.sidenav {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+} 
+
+header {
+  top: 0  /* why was my top 96 for signup page??? */
+} 
+}
+
+@media screen and (max-width: 435px) {    
+
+  .mobile-col {
+    flex-direction: column;
+  } 
+
+  .mobile-w-100 {
+    width: 100%;
+  } 
+
+  .marginreset {
+    margin: 0px;
+  } 
+
+  #card1 {
+    width: 250px; 
+  } 
+
+  .mobile-margin-top { 
+     margin-top: var(--spacingone);
+} 
+
+.mobile-show {
+  display: flex;
+} 
+
+.mobile-hide {
+  display: none;
+} 
+
+.mobile-center {
+  align-content: center; 
+  align-items: center;
+} 
+
+#card2 {
+  line-height: 1.5;
+} 
+
+.h-100{
+  height: 250px
+} 
+
+.border-reset {
+  border: 0;
+}
+.imagecrop {
+  height: auto 
+} 
+
+.icon-size {
+  width: 24px; 
+  height: 24px; 
+}
+} 

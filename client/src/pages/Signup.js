@@ -14,7 +14,7 @@ function MyForm2() {
     return (
       <section className='margin-top-XXL col center w-100 paddingbottom'> 
         
-     <form className="col space_evenly center border1" style={{ height: 800, width: 400 }}>  
+     <form className="col space_evenly center border1 border-reset" style={{ height: 800, width: 400 }}>  
 
      <img className="imagesize_large" src={logo} alt="logo" />
        <label className='col margin-top-M'>Email<input className='w-100 margin-top-S' style={{ width: 310, height: 45 }} type="text" name="name" /> </label> 
