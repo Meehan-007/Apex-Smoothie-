@@ -35,12 +35,6 @@ const Rewards = () => {
 
 
 
-         <div className='row margin-top-XL space_center mobile-col web-none mobile-show'> 
-         <img className="portrait2 circle shadow" src={smoothie2} alt="smoothie" />  
-         <p className='w-50 margin-left-XXL mobile-w-100 marginreset mobile-margin-top'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-           et dolore magna aliqua. Ut enim ad minim veniam, 
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         </div>
 
 
 

@@ -12,11 +12,11 @@ const secondarynav = () => {
        
 
        <div className='row space_between w-75 TabletL-w-90 flexwrap TabletS-w-100'> 
-              <Link to="/"> Category 1 </Link> 
-              <Link to="/"> Category 1 </Link> 
-              <Link to="/"> Category 1 </Link> 
-              <Link to="/"> Category 1 </Link> 
-              <Link to="/"> Category 1 </Link> 
+              <Link to="/"> Iced Refreshers </Link> 
+              <Link to="/"> Light Intensity </Link> 
+              <Link to="/"> Medium Intensity </Link> 
+              <Link to="/"> High Intensity </Link> 
+              <Link to="/"> Crushed fruit bowls </Link> 
                
           </div>      
                

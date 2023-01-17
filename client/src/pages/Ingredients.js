@@ -10,46 +10,11 @@ const Ingredients2 = () => {
      <div id='coveringred' className='space_center'><h1 className='white'> Ingredients</h1> </div>
     </div>  
 
-    <section className='pagemarginleft pagemarginright space_center col margin-top-M'> 
+   
        
-       <div className='col margin-top-XL'> 
-       <h2> Ingredient item </h2>
-       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-         et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div> 
-
-       <div className='col margin-top-XL'> 
-       <h2> Ingredient item </h2>
-       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-         et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>  
-
-      <div className='col margin-top-XL'> 
-       <h2> Ingredient item </h2>
-       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-         et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>  
-
-       <div className='col margin-top-XL'> 
-       <h2> Ingredient item </h2>
-       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-         et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>  
-
-       <div className='col margin-top-XL'> 
-       <h2> Ingredient item </h2>
-       <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-         et dolore magna aliqua. Ut enim ad minim veniam, 
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div> 
+      
 
     </section> 
-    </section> 
-
 
 
 //   <section className='col paddingbottom'>  

@@ -34,10 +34,7 @@ function App() {
         path="/about" 
         element={<About />} 
       /> 
-      <Route 
-        path="/ingredients" 
-        element={<Ingredients />} 
-      /> 
+     
       <Route 
         path="/menu" 
         element={<Menu />} 

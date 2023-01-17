@@ -22,19 +22,26 @@ const Menu = () => {
     </div>
     <section className='space_center col flexclear pagemarginleft pagemarginleft-tablet marginreset '> 
 
-    <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+    <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Iced Refreshers </h4>
    <div className='gapM margin-top-M row flexwrap mobile-col mobile-center mobile-w-100'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
   </div> 
 
   
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Light Intensity </h4>
   <div className=' margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div>
   </div>  
 
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Specials </h4>
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Medium Intensity </h4>
    <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
   </div>  
   
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> High Intensity </h4>
+   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
+  </div>   
+
+  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Crushed fruit bowls </h4>
+   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
+  </div>  
   </section>
   </section>
     );
