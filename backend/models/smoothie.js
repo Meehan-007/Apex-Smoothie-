@@ -1,48 +1,42 @@
-const { Schema, model } = require('mongoose'); 
+// import important parts of sequelize library
+const { Model, DataTypes } = require('sequelize');
+// import our database connection from config.js
+const sequelize = require('../config/connection.js');
 
-const smoothieSchema = new Schema(
-    {
-      smoothiename: {
-        type: String,
-        required: true,
-        unique: true,
-      },
-      description: {
-        type: String,
-        required: true,
-      }, 
-      //  image: { type: String, required: true },
-      cover: {
-        type: String,
-        required: true,
-        desc: String, 
-        image: 
-        {
-            data: Buffer, 
-            ContentType: String
-        }
-      },
+// Initialize Product model (table) by extending off Sequelize's Model class
+class Smoothie extends Model {}
+
+
+Smoothie.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    }, 
+    smoothie_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },  
+    image: {
+      type: DataTypes.BLOB('long'),
+      allowNull: false
+    }, 
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }, 
+   
     
-    },
-    
-  );
-  
-//   // set up pre-save middleware to create password
-//   userSchema.pre('save', async function(next) {
-//     if (this.isNew || this.isModified('password')) {
-//       const saltRounds = 10;
-//       this.password = await bcrypt.hash(this.password, saltRounds);
-//     }
-  
-//     next();
-//   });
-  
-//   // compare the incoming password with the hashed password
-//   userSchema.methods.isCorrectPassword = async function(password) {
-//     return bcrypt.compare(password, this.password);
-//   };
-  
-  
-  const Smoothie = model('Smoothie', smoothieSchema);
-  
-  module.exports = Smoothie;
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'smoothie',
+  }
+);
+
+module.exports = Smoothie;
