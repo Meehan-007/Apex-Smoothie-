@@ -15,14 +15,14 @@ SmoothieCategory.init(
     smoothie_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'smoothie',
+        model: 'Smoothie',
         key: 'id'
       }
     }, 
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
+        model: 'Category',
         key: 'id'
       }
     }
@@ -32,7 +32,7 @@ SmoothieCategory.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'smoothieCategory',
+    modelName: 'SmoothieCategory',
   }
 );
 

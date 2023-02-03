@@ -27,7 +27,22 @@ Smoothie.init(
       type: DataTypes.STRING,
       allowNull: false
     }, 
-   
+   calories: {
+     type: DataTypes.DECIMAL, 
+     
+   }, 
+   fat: {
+    type: DataTypes.DECIMAL, 
+    
+  }, 
+  carbohydrates: {
+    type: DataTypes.DECIMAL, 
+    
+  }, 
+  protein: {
+    type: DataTypes.DECIMAL, 
+    
+  }
     
   },
   {
@@ -35,7 +50,7 @@ Smoothie.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'smoothie',
+    modelName: 'Smoothie',
   }
 );
 
