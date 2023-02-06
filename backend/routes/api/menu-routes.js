@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     const categories = await Category.findAll({
       where: {
         id: {
-          [Op.or]: [1, 2, 3]
+          [Op.or]: [4, 5, 6, 7, 8]
         }
       },
       include: [{

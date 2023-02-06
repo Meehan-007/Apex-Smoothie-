@@ -1,5 +1,5 @@
-import React from 'react';
- 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import SmoothieCards from '../components/SmoothieCard' 
 
@@ -10,6 +10,17 @@ import HeroCover2 from '../components/SmoothieHero2';
 //import Auth from '../utils/Auth'; 
 
 const Menu = () => { 
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/api/menu')
+      .then(res => {
+        console.log(res.data);
+        setCategories(res.data);
+      }) 
+      .catch(err => console.error(err));
+  }, []);
 
     return (  
   <section className='col paddingbottom'>  
@@ -21,27 +32,8 @@ const Menu = () => {
       <SecondaryNavigation/>
     </div>
     <section className='space_center col flexclear pagemarginleft pagemarginleft-tablet marginreset '> 
-
-    <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Iced Refreshers </h4>
-   <div className='gapM margin-top-M row flexwrap mobile-col mobile-center mobile-w-100'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
-  </div> 
-
-  
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Light Intensity </h4>
-  <div className=' margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div>
-  </div>  
-
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Medium Intensity </h4>
-   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
-  </div>  
-  
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> High Intensity </h4>
-   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
-  </div>   
-
-  <div className='left col mobile-w-100 mobile-center'><h4 className='margin-top-XL'> Crushed fruit bowls </h4>
-   <div className='margin-top-M gapM row flexwrap mobile-col mobile-center'><SmoothieCards/> <SmoothieCards/> <SmoothieCards/> <SmoothieCards/> </div> 
-  </div>  
+<SmoothieCards categories={categories} />;
+   
   </section>
   </section>
     );
