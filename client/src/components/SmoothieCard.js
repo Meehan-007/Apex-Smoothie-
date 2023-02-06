@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'; 
 
 
 
@@ -28,7 +28,10 @@ import React from 'react';
   //   );
   // }; 
 
-  const SmoothieCards = ({ categories }) => {
+  const SmoothieCards = ({ categories }) => { 
+
+
+    
     return (
       <div>
         {categories.map(category => (
@@ -43,7 +46,8 @@ import React from 'react';
          <div className="col space_evenly w-90 h-100 padding-S" id='card2' >
            <h5> {smoothie.smoothie_name} </h5> 
            <p style={{ width: '90%' }}>  {smoothie.description} </p> 
-             <button className="buttonLarge w-100" > Learnmore </button> 
+           <Link to={`/SmoothieInfo/${smoothie.id}`}> <button className="buttonLarge w-100"> Learnmore </button> </Link> 
+           
              </div> 
          </section>
               ))}

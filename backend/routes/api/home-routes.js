@@ -6,8 +6,7 @@ const { Smoothie, Category, SmoothieCategory } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    console.log("Started the / route");
-    console.log(Category);
+    
     const categories = await Category.findAll({
       where: {
         id: {
@@ -39,6 +38,9 @@ router.get('/', async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
+  if (res.headersSent) {
+    return;
+  }
   try {
       const smoothieId = req.params.id;
       const smoothie = await Smoothie.findByPk(smoothieId,{

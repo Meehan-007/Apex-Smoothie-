@@ -27,8 +27,8 @@ function App() {
         element={<Home />} 
       />
       <Route 
-        path="/login" 
-        element={<Login />} 
+        path="/ingredients" 
+        element={<Ingredients />} 
       /> 
       <Route 
         path="/about" 
@@ -52,7 +52,7 @@ function App() {
         element={<Rewards />} 
       /> 
       <Route 
-        path="/smoothieInfo" 
+        path="/smoothieInfo/:id" 
         element={<SmoothieInfo />} 
       />
       <Route 

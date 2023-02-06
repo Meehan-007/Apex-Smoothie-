@@ -1,6 +1,6 @@
 import React from 'react';
 
-//import Auth from '../utils/Auth'; 
+
 
 const Ingredients2 = () => {
  
