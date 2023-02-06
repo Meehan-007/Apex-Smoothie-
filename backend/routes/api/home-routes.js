@@ -38,19 +38,18 @@ router.get('/', async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-  if (res.headersSent) {
-    return;
-  }
-  try {
-      const smoothieId = req.params.id;
-      const smoothie = await Smoothie.findByPk(smoothieId,{
+  Smoothie.findOne({ 
+    where: {
+      id: req.params.id
+    },
+     
         
-      });
-      res.status(200).json(smoothie); 
-      console.log("Data:", data);
-  } catch (err) {
+      }).then(smoothie => { 
+      res.json(smoothie); 
+      
+  }) .catch (err => {
       res.status(500).json({ message: err.message });
-  }
+  });
 });
   
 
