@@ -31,7 +31,7 @@ const Menu = () => {
     <div className='margin-top-XL'> 
       <SecondaryNavigation/>
     </div>
-    <section className='space_center col flexclear pagemarginleft pagemarginleft-tablet marginreset '> 
+    <section className='space_center col pagemarginleft pagemarginright pagemarginleft-tablet pagemarginright-tablet marginreset '> 
 <SmoothieCards categories={categories} />;
    
   </section>

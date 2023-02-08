@@ -707,7 +707,9 @@ backdrop-filter: blur(22px);
 .pagemarginleft-tablet {
   margin-left: 5%;
 } 
-
+.pagemarginright-tablet {
+  margin-right: 5%;
+} 
 .padding-left {
   padding-left: 2px;
 } 

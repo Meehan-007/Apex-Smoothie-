@@ -72,7 +72,7 @@ const Header = () => {
   exact>
   About
 </Link>  
-<Link
+{/* <Link
   to="/signup"
   activeClassName="active-link" 
   className="sidenav"
@@ -87,11 +87,11 @@ const Header = () => {
   onClick={() => closeMenu()}
   exact>
   Login
-</Link> </div> 
+</Link>  */}  </div> 
 </ul>
   </nav> 
 
-  <BiSearch className="web-none TabletS-show icon-size" style={{ color: "#7b7b7b" }} />
+  {/* <BiSearch className="web-none TabletS-show icon-size" style={{ color: "#7b7b7b" }} /> */}
 
 
         <div className="col-1 space_center TabletS-none">
@@ -103,7 +103,9 @@ const Header = () => {
           <div className='col-3 tabletL-col-2 TabletS-none'> </div> 
 
           <nav className="col-4 space_evenly center tabletL-col-5 TabletS-none"> 
-
+          <Link to="/">
+            Home 
+          </Link> 
           <Link to="/menu">
              Menu 
           </Link> 
@@ -113,13 +115,13 @@ const Header = () => {
           <Link to="/about">
           About
           </Link> 
-          <img className="imagesize_small" src={search} alt="search"/>
+          {/* <img className="imagesize_small" src={search} alt="search"/> */}
 
           </nav>   
 
-          <div className='col-2 tabletL-col-1 TabletS-none'> </div> 
+          {/* <div className='col-2 tabletL-col-1 TabletS-none'> </div>  */}
 
-          <div className='col-1 row center auto-width tabletL-1 TabletS-none'> 
+          {/* <div className='col-1 row center auto-width tabletL-1 TabletS-none'> 
                  {/* {Auth.loggedIn() ? (
               <>
                 <Link to="/account">
@@ -129,13 +131,13 @@ const Header = () => {
               </>
             ) : (
        //       <> */}
-                <Link to="/login"> <p className="bold"> Login </p>  </Link>
+                {/* <Link to="/login"> <p className="bold"> Login </p>  </Link>
                 <Link to="/signup">
                     <button className='buttonSmall margin-left-M'> Signup </button> 
                     </Link>
               {/* </> */}
             {/* )}  */}
-            </div>
+            {/* </div> */} 
         
       </header>
     );

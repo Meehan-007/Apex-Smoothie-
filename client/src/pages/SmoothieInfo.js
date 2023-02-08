@@ -51,7 +51,7 @@ const Smoothieinfo = () => {
   <div className='pagemarginleft pagemarginright margin-top-XL'> 
     <h4> Ingredients </h4> 
     <p> {Smoothies.description}</p> 
-       <Link to="/ingredients"> Want to learn where we source our Ingredients? </Link> 
+       <Link to="/about"> Want to learn where we source our Ingredients? </Link> 
   </div> 
    <h1 className='margin-top-XXL pagemarginleft pagemarginright'> Nutrition Info </h1>   
       <div> 

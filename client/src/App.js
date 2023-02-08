@@ -26,10 +26,7 @@ function App() {
         path="/" 
         element={<Home />} 
       />
-      <Route 
-        path="/ingredients" 
-        element={<Ingredients />} 
-      /> 
+      
       <Route 
         path="/about" 
         element={<About />} 
@@ -38,14 +35,6 @@ function App() {
       <Route 
         path="/menu" 
         element={<Menu />} 
-      />
-      <Route 
-        path="/signup" 
-        element={<Signup />} 
-      />
-      <Route 
-        path="/account" 
-        element={<Account />} 
       />
       <Route 
         path="/rewards" 
