@@ -7,7 +7,7 @@ const smoothieData = [
   {
     smoothie_name: 'Blood Orange Coconut Ginger',
     description: "juice with green coffeee extract.",
-    image: "https://i.imgur.com/ur0QNn0.jpg", 
+    image: "https://i.imgur.com/C0RKD3i.jpg", 
     calories: 130,
     fat: 0,
    carbohydrates: 32,
@@ -16,7 +16,7 @@ const smoothieData = [
   {
     smoothie_name: 'Dragon Fruit Lychee',
     description: "juice with green coffeee extract.",
-    image: "https://i.imgur.com/ur0QNn0.jpg", 
+    image: "https://i.imgur.com/C0RKD3i.jpg", 
     calories: 130,
     fat: 0,
    carbohydrates: 32,
@@ -25,7 +25,7 @@ const smoothieData = [
   {
     smoothie_name: 'Strawberry Acai',
     description: "juice with green coffeee extract.",
-    image: "https://i.imgur.com/t8uWguW.jpg", 
+    image: "https://i.imgur.com/BjdqfEz.jpg", 
     calories: 130,
     fat: 0,
    carbohydrates: 32,
@@ -34,7 +34,7 @@ const smoothieData = [
   {
     smoothie_name: 'Watermelon Cucumber Mint',
     description: "juice with green coffeee extract.",
-    image: "https://i.imgur.com/t8uWguW.jpg", 
+    image: "https://i.imgur.com/BjdqfEz.jpg", 
     calories: 130,
     fat: 0,
    carbohydrates: 32,
@@ -43,7 +43,7 @@ const smoothieData = [
   {
     smoothie_name: 'Peach Mango',
     description: "juice with green coffeee extract.",
-    image: "https://i.imgur.com/ur0QNn0.jpg", 
+    image: "https://i.imgur.com/C0RKD3i.jpg", 
     calories: 130,
     fat: 0,
    carbohydrates: 32,
@@ -55,7 +55,7 @@ const smoothieData = [
   {
     smoothie_name: 'Berry Trim',
     description: "strawberries, blueberries, blackberries, raspberries, bannan & vanilla whey protein.",
-    image: "https://i.imgur.com/u3yLxNA.jpg", 
+    image: "https://i.imgur.com/5DzMo9S.jpg", 
     calories: 290,
     fat: 2,
    carbohydrates: 53,
@@ -64,7 +64,7 @@ const smoothieData = [
   {
     smoothie_name: 'Strawberry Lean',
     description: "Unsweetened almond milk, strawberries, pineapple & orange & vanilla whey protein.",
-    image: "https://i.imgur.com/GIDCZr2.jpg", 
+    image: "https://i.imgur.com/BRJLVOj.jpg", 
     calories: 190,
     fat: 4,
    carbohydrates: 17,
@@ -73,7 +73,7 @@ const smoothieData = [
   {
     smoothie_name: 'Tropical Shredder',
     description: "Unsweetened almond milk, pineapple, mangoes, coconut & banana & vanilla whey protein.",
-    image: "https://i.imgur.com/U9NjnfM.jpg", 
+    image: "https://i.imgur.com/tggCoRK.jpg", 
     calories: 280,
     fat: 10,
    carbohydrates: 24,
@@ -82,7 +82,7 @@ const smoothieData = [
   {
     smoothie_name: 'PB Cup Lite',
     description: "Choice of liquid, organic chocolate & PB Lite with chocolate & vanilla whey protein.",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 270,
     fat: 6,
    carbohydrates: 28,
@@ -94,7 +94,7 @@ const smoothieData = [
   {
     smoothie_name: 'Banana nut blast lite',
     description: "choice of liquid, banana & PB lite with vanilla whey protein.",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 520,
     fat: 22,
    carbohydrates: 31,
@@ -129,7 +129,7 @@ const smoothieData = [
   {
     smoothie_name: 'Strawberry Slam',
     description: "Strawberries, Banana & more Strawberries with Vanilla Whey Protein",
-    image: "https://i.imgur.com/GIDCZr2.jpg", 
+    image: "https://i.imgur.com/BRJLVOj.jpg", 
     calories: 320,
     fat: 2,
    carbohydrates: 54,
@@ -139,7 +139,7 @@ const smoothieData = [
   {
     smoothie_name: 'Hawaiian Harvest',
     description: "Pineapple, Coconut & Banana with Vanilla Whey Protein",
-    image: "https://i.imgur.com/U9NjnfM.jpg", 
+    image: "https://i.imgur.com/tggCoRK.jpg", 
     calories: 330,
     fat: 4.5,
    carbohydrates: 49,
@@ -151,7 +151,7 @@ const smoothieData = [
   {
     smoothie_name: 'Mango Crusher',
     description: "Mangoes, Pineapple, Strawberries & Banana with Vanilla Whey Protein",
-    image: "https://i.imgur.com/l9pNIxY.jpg", 
+    image: "https://i.imgur.com/3fB9PvW.jpg", 
     calories: 330,
     fat: 2.5,
    carbohydrates: 55,
@@ -172,7 +172,7 @@ const smoothieData = [
   {
     smoothie_name: 'Veggie Might',
     description: "Pineapple, Peach or Mango, Coconut, Spinach, Kale, Avocado, Lemon & Banana with Vanilla Whey Protein",
-    image: "https://i.imgur.com/6P1D9oi.jpg", 
+    image: "https://i.imgur.com/WWRzCY1.jpg?1", 
     calories: 320,
     fat: 4,
    carbohydrates: 51,
@@ -193,7 +193,7 @@ const smoothieData = [
   {
     smoothie_name: 'Cracker Jax',
     description: "Choice of Liquid, Organic Caramel, Sea Salt, PB Lite & Oats with Vanilla Whey Protein",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 340,
     fat: 6,
    carbohydrates: 44,
@@ -204,7 +204,7 @@ const smoothieData = [
   {
     smoothie_name: 'Peaches N Cream',
     description: "Peaches, Pears, Apricots, Strawberries & Banana with Vanilla Whey Protein",
-    image: "https://i.imgur.com/GIDCZr2.jpg"
+    image: "https://i.imgur.com/BRJLVOj.jpg"
   }, 
 
 
@@ -212,7 +212,7 @@ const smoothieData = [
   {
     smoothie_name: 'NY Style Cheesecake',
     description: "Unsweetened Almond Milk, Organic Vanilla Crème, Choice of Blueberries or Strawberries & Graham Crackers with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/evlv25U.jpg", 
+    image: "https://i.imgur.com/8X3S5NF.jpg", 
     calories: 320,
     fat: 4.5,
    carbohydrates: 40,
@@ -224,7 +224,7 @@ const smoothieData = [
   {
     smoothie_name: 'Madison',
     description: "Unsweetened Almond Milk & Peanut Butter with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 290,
     fat: 10,
    carbohydrates: 13,
@@ -234,7 +234,7 @@ const smoothieData = [
   {
     smoothie_name: 'PB&JO',
     description: "Choice of Liquid, Strawberries & Peanut Butter with Vanilla Whey Protein",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 290,
     fat: 10,
    carbohydrates: 13,
@@ -247,7 +247,7 @@ const smoothieData = [
   {
     smoothie_name: 'Trail Mix',
     description: "Choice of Liquid, Apple Cinnamon Granola, Almond Butter, Raisins & Banana with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/PPlTa8v.jpg", 
+    image: "https://i.imgur.com/iSznOg5.jpg?1", 
     calories: 500,
     fat: 14,
    carbohydrates: 57,
@@ -259,7 +259,7 @@ const smoothieData = [
   {
     smoothie_name: 'Vanilla Berry Parfait',
     description: "Strawberries, Blueberries, Blackberries, Raspberries, Yogurt & Berry Coconut Granola with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/evlv25U.jpg", 
+    image: "https://i.imgur.com/8X3S5NF.jpg", 
     calories: 340,
     fat: 9,
    carbohydrates: 25,
@@ -271,7 +271,7 @@ const smoothieData = [
   {
     smoothie_name: 'Peanut Butter',
     description: "Choice of Liquid, Organic Chocolate & Peanut Butter with Chocolate & Vanilla Whey Protein ",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 530,
     fat: 22,
    carbohydrates: 34,
@@ -282,7 +282,7 @@ const smoothieData = [
   {
     smoothie_name: 'Banana Nut Bread',
     description: "Unsweetened Almond Milk, Banana, Organic Chai Spices & Almond Butter with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/PPlTa8v.jpg", 
+    image: "https://i.imgur.com/iSznOg5.jpg?1", 
     calories: 520,
     fat: 22,
    carbohydrates: 31,
@@ -292,7 +292,7 @@ const smoothieData = [
   {
     smoothie_name: 'Mo Mass',
     description: "Choice of Liquid, Peanut Butter, Oats, Banana & 5g Creatine with Vanilla or Chocolate 'Daily Mass' Builder ",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 650,
     fat: 21,
    carbohydrates: 85,
@@ -302,7 +302,7 @@ const smoothieData = [
   {
     smoothie_name: 'Banana Nut Blast',
     description: "Choice of Liquid, Peanut Butter & Banana with Vanilla or Chocolate Whey Protein",
-    image: "https://i.imgur.com/PPxpEQH.jpg", 
+    image: "https://i.imgur.com/QwHWFfS.jpg", 
     calories: 520,
     fat: 22,
    carbohydrates: 31,
@@ -325,7 +325,7 @@ const smoothieData = [
   {
     smoothie_name: 'Banana Split',
     description: "Pineapple, Banana, Organic Vanilla Crème & Strawberries with Vanilla Whey Protein ",
-    image: "https://i.imgur.com/GIDCZr2.jpg", 
+    image: "https://i.imgur.com/BRJLVOj.jpg", 
     calories: 290,
     fat: 10,
    carbohydrates: 13,
