@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../assests/smoothieorange.jpg' 
+import hero from '../assests/PBJ2.jpg' 
 import { Link } from 'react-router-dom'; 
 
 //import Auth from '../utils/Auth'; 
@@ -12,12 +12,9 @@ const heroCover2 = () => {
         <div className=" colcenter w-50 col TabletL-w-90"> 
           <h1> Smoothie of the Month </h1>  
           <img className='portrait web-none tablet-show margin-top-M w-100 imagecrop' src={hero} alt="smoothie of the month" /> 
-          <p className='margin-top-M'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-              ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-               culpa qui officia deserunt mollit anim id est laborum. </p> 
-           <Link to="/SmoothieInfo"> <button className="buttonLarge margin-top-M mobile-w-100"> Learn More </button> </Link>
+          <p className='margin-top-M'> Our delicious peanut butter smoothie is made with your choice of liquid, blended with fresh strawberries, creamy peanut butter, and vanilla protein. It's a perfect balance of sweet and savory, 
+          and provides a healthy and satisfying treat any time of day. </p> 
+           <Link to={`/SmoothieInfo/23`}> <button className="buttonLarge margin-top-M mobile-w-100"> Learn More </button> </Link>
           
         </div> 
 

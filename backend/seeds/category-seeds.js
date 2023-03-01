@@ -11,19 +11,24 @@ const categoryData = [
     category_name: 'Vegan Friendly',
   },
   {
-    category_name: 'Iced Refreshers',
+    category_name: 'Iced Refreshers', 
   },
   {
-    category_name: 'Light Intensity',
+    category_name: 'Light Intensity', 
+    
   }, 
   {
-    category_name: 'Medium Intensity',
+    category_name: 'Medium Intensity',  
+    
+    
   },
   {
-    category_name: 'High Intensity',
+    category_name: 'High Intensity', 
+    
   }, 
   {
-    category_name: 'Crushed Fruit Bowls',
+    category_name: 'Crushed Fruit Bowls', 
+    
   },
 ]; 
 

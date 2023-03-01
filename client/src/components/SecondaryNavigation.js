@@ -1,31 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';  
 
-// NEED TO SET UP SCROLLS ON THIS PAGE
-//import Auth from '../utils/Auth'; 
 
-const secondarynav = () => {
-  
-  
-    return (
-      <section className="pagemarginleft pagemarginright row space_center margin-top-M"> 
-       
+const SecondaryNavigation = (props) => {
+  const IcedRefreshersRef = props.IcedRefreshersRef;
+  const LightIntensityRef = props.LightIntensityRef;
+  const MediumIntensityRef = props.MediumIntensityRef;
+  const HighIntensityRef = props.HighIntensityRef;
+  const CrushedFruitBowlsRef = props.CrushedFruitBowlsRef;
 
-       <div className='row space_between w-75 TabletL-w-90 flexwrap TabletS-w-100'> 
-              <Link to="/"> Iced Refreshers </Link> 
-              <Link to="/"> Light Intensity </Link> 
-              <Link to="/"> Medium Intensity </Link> 
-              <Link to="/"> High Intensity </Link> 
-              <Link to="/"> Crushed fruit bowls </Link> 
-               
-          </div>      
-               
-               
-          
-
-      </section>
-      
-    );
+  const handleScroll = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  return (
+    <section className="pagemarginleft pagemarginright row space_center margin-top-M"> 
+      <div className='row space_between w-75 TabletL-w-90 flexwrap TabletS-w-100'> 
+        <Link to="#" onClick={() => handleScroll(IcedRefreshersRef)}>Iced Refreshers</Link>
+        <Link to="#" onClick={() => handleScroll(LightIntensityRef)}>Light Intensity</Link>
+        <Link to="#" onClick={() => handleScroll(MediumIntensityRef)}>Medium Intensity</Link>
+        <Link to="#" onClick={() => handleScroll(HighIntensityRef)}>High Intensity</Link>
+        <Link to="#" onClick={() => handleScroll(CrushedFruitBowlsRef)}>Crushed Fruit Bowls</Link>
+      </div>      
+    </section>
+  );
+};
   
-  export default secondarynav;
+export default SecondaryNavigation;
+

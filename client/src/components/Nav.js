@@ -25,7 +25,7 @@ const Header = () => {
  
 
     return (
-      <header className=" row space_between col-12 padding-top-S padding-bottom-S paddingleft paddingright navBar TabletS-w-90 heightfit">
+      <header className="row space_between padding-top-S padding-bottom-S paddingleft paddingright navBar TabletS-w-90 heightfit">
 
 <nav className="web-none TabletS-show"> 
 
@@ -100,9 +100,9 @@ const Header = () => {
           </Link>
           </div>  
 
-          <div className='col-3 tabletL-col-2 TabletS-none'> </div> 
+          {/* <div className='col-3 tabletL-col-2 TabletS-none'> </div>  */}
 
-          <nav className="col-4 space_evenly center tabletL-col-5 TabletS-none"> 
+          <nav className="col-6 space_evenly center TabletS-none"> 
           <Link to="/">
             Home 
           </Link> 

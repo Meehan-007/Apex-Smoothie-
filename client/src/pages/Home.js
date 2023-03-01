@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
+import cover from '../assests/homecover.JPG' 
  
-import SmoothieHero from '../components/SmoothieHero'  
+ 
 import SmoothieCards from '../components/SmoothieCard' 
 
-import Smoothiecover2 from '../assests/Smoothiecover2.jpeg'
+
 
 //import Auth from '../utils/Auth'; 
 
@@ -23,11 +24,16 @@ const Home = () => {
   }, []);
   
     return (  
-  <section className='col paddingbottom'>  
+  <section className='paddingbottom'>  
 
-  <div className='space_center'> 
-  <SmoothieHero/> 
-  </div>
+{/* this is to provide a buffer so the image does not go under the navigation because the nav has a z index */}
+<div className='web-none TabletS-show' id='buffer' style={{ "width" : "100%"}}> </div>
+  
+  <div> 
+      <img className="backgroundcover"  src={cover} alt="cover" /> 
+      {/* <Link to="/signup"> <button className='buttonLarge'>  Sign Up </button> </Link>  */}
+      </div>  
+ 
     <section className='space_center col pagemarginleft pagemarginright pagemarginleft-tablet pagemarginright-tablet marginreset '> 
 
   
