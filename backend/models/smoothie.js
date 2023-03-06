@@ -6,6 +6,7 @@ const sequelize = require('../config/connection.js');
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Smoothie extends Model {}
 
+//update plz
 
 Smoothie.init(
   {
