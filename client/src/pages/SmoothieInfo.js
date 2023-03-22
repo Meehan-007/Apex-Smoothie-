@@ -10,11 +10,15 @@ import { Link } from 'react-router-dom';
 
 const Smoothieinfo = () => {
   const { id } = useParams();
-  const [Smoothies, setSmoothies] = useState([]);
+  const [Smoothies, setSmoothies] = useState([]); 
+
+  const API_URL = process.env.NODE_ENV === 'production'
+  ? 'https://apex-smoothies.herokuapp.com/api'
+  : 'http://localhost:3001/api';
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/smoothie/${id}`)
+      .get(`${API_URL}/smoothie/${id}`)
       .then(res => {
         console.log(res.data);
         setSmoothies(res.data);

@@ -11,11 +11,16 @@ import HeroCover2 from '../components/SmoothieHero2';
 //import Auth from '../utils/Auth'; 
 
 const Menu = () => { 
+
+  const API_URL = process.env.NODE_ENV === 'production'
+  ? 'https://apex-smoothies.herokuapp.com/api'
+  : 'http://localhost:3001/api';
+
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/api/menu')
+      .get(`${API_URL}/menu`)
       .then(res => {
         console.log(res.data);
         setCategories(res.data);

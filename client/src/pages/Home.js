@@ -9,13 +9,17 @@ import SmoothieCards from '../components/SmoothieCard'
 
 //import Auth from '../utils/Auth'; 
 
-const Home = () => { 
+const Home = () => {  
+
+  const API_URL = process.env.NODE_ENV === 'production'
+  ? 'https://apex-smoothies.herokuapp.com/api'
+  : 'http://localhost:3001/api';
 
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/api/smoothie')
+      .get(`${API_URL}/smoothie`)
       .then(res => {
         console.log(res.data);
         setCategories(res.data);
