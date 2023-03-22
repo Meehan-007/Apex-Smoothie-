@@ -11,7 +11,7 @@
         "develop": "concurrently \"cd backend && npm run watch\" \"cd client && npm start\"",
         "install": "cd backend && npm i && cd ../client && npm i",
         "build": "cd client && npm run build",
-        "seed": "cd server && npm run seed"
+        "seed": "cd backend && npm run seed"
     },
     "repository": {
         "type": "git"
