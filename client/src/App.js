@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import './index.css' 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -12,13 +12,16 @@ import Rewards from './pages/Rewards';
 
 import NoMatch from './pages/NoMatch';
 import SmoothieInfo from './pages/SmoothieInfo';
+import StripeContainer from './components/stripecontainer';
 
 
-function App() {
+function App() { 
+  const [showitem, setShowItem] = useState(false)
   return ( 
     <Router> 
     <div className="flex-column justify-flex-start min-100-vh"> 
-    <Header /> 
+    <Header />  
+    {/* {showitem ? <StripeContainer/> : <> <button onClick={() => setShowItem(true)}> Purchase </button></>} */}
     <div className='container'> 
     <Routes> 
       <Route 
