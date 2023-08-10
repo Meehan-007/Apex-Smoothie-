@@ -18,9 +18,11 @@ const SmoothieCards = ({ IcedRefreshersRef, LightIntensityRef, MediumIntensityRe
                <h5 className='margin-top-S'>{smoothie.smoothie_name}</h5>
                <p  className='margin-top-S w-90'>{smoothie.description}</p>
              </div>
-             <Link to={`/SmoothieInfo/${smoothie.id}`} className="w-90 margin-bottom-S">
-               <button className="buttonLarge w-100">Learn more</button>
-             </Link>
+             <div className='margin-bottom-M w-90 row space_between padding-bottom-M mobile-col-reverse'> 
+            
+               <button className="buttonSmallSecondary mobile-w-100 mobile-margin-top"> <Link to={`/SmoothieInfo/${smoothie.id}`} className='w-100 buttonLink'> Learn more </Link></button> 
+               <button className="buttonSmall mobile-w-100"> Add to Cart </button>
+               </div>
            </section>
          ))}
        </div>

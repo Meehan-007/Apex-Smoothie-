@@ -114,6 +114,10 @@ header {
 
 /* spacing */ 
 
+.marginXS {
+  margin: 0.5rem;
+}
+
 .margin-top-S{
   margin-top: var(--spacingone);
 }  
@@ -185,6 +189,10 @@ header {
 }  
 .padding-bottom-S{
   padding-bottom: var(--spacingone);
+}   
+
+.padding-bottom-M{
+  padding-bottom: var(--spacingtwo);
 }  
 
 .padding-M{
@@ -357,17 +365,38 @@ header {
 
 
 /*   Button      */ 
+
+.buttonLink{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  line-height: 41px;
+} 
+
 .buttonSmall {
   background-color: var(--primary-color); 
   color: var(--white);
-  width: 104px; 
+  width: 47%; 
   height: 45px; 
-  border-radius: 90px; 
   font-size: 16px; 
   font-weight: bold; 
   text-align: center; 
   border-width: 0; 
   border-style: none;
+} 
+
+.buttonSmallSecondary {
+  background-color: var(--white); 
+  color: var(--primary-color); 
+  border-color: var(--primary-color);
+  width: 47%; 
+  height: 45px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center; 
+  border-width: 2px; 
+  border-style: solid;
 } 
 
 .buttonMedium { 
