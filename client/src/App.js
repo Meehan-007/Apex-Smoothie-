@@ -11,17 +11,18 @@ import Menu from './pages/Menu';
 import Rewards from './pages/Rewards'; 
 
 import NoMatch from './pages/NoMatch';
-import SmoothieInfo from './pages/SmoothieInfo';
-import StripeContainer from './components/stripecontainer';
+import SmoothieInfo from './pages/SmoothieInfo'; 
+import ShoppingCart from './pages/shoppingCart';
+
 
 
 function App() { 
-  const [showitem, setShowItem] = useState(false)
+  
   return ( 
     <Router> 
     <div className="flex-column justify-flex-start min-100-vh"> 
     <Header />  
-    {/* {showitem ? <StripeContainer/> : <> <button onClick={() => setShowItem(true)}> Purchase </button></>} */}
+    
     <div className='container'> 
     <Routes> 
       <Route 
@@ -41,6 +42,10 @@ function App() {
       <Route 
         path="/rewards" 
         element={<Rewards />} 
+      /> 
+       <Route 
+        path="/cart" 
+        element={<ShoppingCart />} 
       /> 
       <Route 
         path="/smoothieInfo/:id" 

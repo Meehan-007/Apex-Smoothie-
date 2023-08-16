@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
         through: {
           model: SmoothieCategory,
         },
-        attributes: ['id', 'smoothie_name', 'image', 'description'],
+        attributes: ['id', 'smoothie_name', 'image', 'description', 'price'],
       }],
     //  order: [[Category, 'id', 'ASC']]
     });

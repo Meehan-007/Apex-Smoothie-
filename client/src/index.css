@@ -186,7 +186,12 @@ header {
 
 .padding-top-S{
   padding-top: var(--spacingone);
-}  
+}   
+
+.padding-top-M{
+  padding-top: var(--spacingtwo);
+}   
+
 .padding-bottom-S{
   padding-bottom: var(--spacingone);
 }   
@@ -371,7 +376,8 @@ header {
   font-weight: bold;
   text-align: center;
   display: inline-block;
-  line-height: 41px;
+  line-height: 41px; 
+  color: var(--primary-color); 
 } 
 
 .buttonSmall {
@@ -565,6 +571,9 @@ header {
 } 
 /* forms  */
 
+#Menu{
+  height: 24px;
+}
 .stroke{ 
   stroke: #C7C7C7; 
   stroke-width: 1px;
@@ -659,8 +668,8 @@ backdrop-filter: blur(22px);
 
 
 .icon-size {
-  width: 40px; 
-  height:40px; 
+  width: 30px; 
+  height:30px; 
 }
 
 .styled-table {
@@ -922,7 +931,7 @@ header {
   } 
 
   #buffer {
-    height: 59px;
+    height: 55px;
   } 
 
   /* #card1 {

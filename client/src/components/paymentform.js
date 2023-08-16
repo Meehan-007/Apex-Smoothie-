@@ -1,6 +1,6 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
-import React, { useState } from 'react'
+import React, { useState } from 'react' 
 
 
 const CARD_OPTIONS = {
@@ -23,7 +23,7 @@ const CARD_OPTIONS = {
 	}
 }
 
-export default function PaymentForm() {
+export default function PaymentForm({total}) {
     const [success, setSuccess ] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
@@ -38,13 +38,15 @@ export default function PaymentForm() {
 
 
     if(!error) {
-        try {
+        try { 
+            console.log("the total of the order", total)
             const {id} = paymentMethod
-            const response = await axios.post("http://localhost:3001/payment", {
-                amount: 1000,
-                id
-            })
-
+            const response = await axios.post("http://localhost:3001/payment", { 
+                amount: total,
+                id, 
+                
+            }) 
+     
             if(response.data.success) {
                 console.log("Successful payment")
                 setSuccess(true)
@@ -72,7 +74,7 @@ export default function PaymentForm() {
         </form>
         :
        <div>
-           <h2>You just bought a sweet spatula congrats this is the best decision of you're life</h2>
+           <h2>Enjoy your smoothie</h2>
        </div> 
         }
             

@@ -43,6 +43,9 @@ Smoothie.init(
   protein: {
     type: DataTypes.DECIMAL, 
     
+  }, 
+  price: {
+    type: DataTypes.DECIMAL
   }
     
   },

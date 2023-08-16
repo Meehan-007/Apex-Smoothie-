@@ -11,7 +11,8 @@ const smoothieData = [
     calories: 130,
     fat: 0,
    carbohydrates: 32,
-   protein: 0
+   protein: 0, 
+   price: 6.00
   },  
   {
     smoothie_name: 'Dragon Fruit Lychee',
@@ -20,7 +21,8 @@ const smoothieData = [
     calories: 130,
     fat: 0,
    carbohydrates: 32,
-   protein: 0 
+   protein: 0,  
+   price: 6.00
   },  
   {
     smoothie_name: 'Strawberry Acai',
@@ -29,7 +31,8 @@ const smoothieData = [
     calories: 130,
     fat: 0,
    carbohydrates: 32,
-   protein: 0
+   protein: 0, 
+   price: 6.00
   },  
   {
     smoothie_name: 'Watermelon Cucumber Mint',
@@ -38,7 +41,8 @@ const smoothieData = [
     calories: 130,
     fat: 0,
    carbohydrates: 32,
-   protein: 0
+   protein: 0, 
+   price: 6.00
   },  
   {
     smoothie_name: 'Peach Mango',
@@ -47,7 +51,8 @@ const smoothieData = [
     calories: 130,
     fat: 0,
    carbohydrates: 32,
-   protein: 0
+   protein: 0, 
+   price: 6.00
   },  
 
 // light intesity smoothie
@@ -59,7 +64,8 @@ const smoothieData = [
     calories: 290,
     fat: 2,
    carbohydrates: 53,
-   protein: 16
+   protein: 16, 
+   price: 11.00
   },  
   {
     smoothie_name: 'Strawberry Lean',
@@ -68,7 +74,8 @@ const smoothieData = [
     calories: 190,
     fat: 4,
    carbohydrates: 17,
-   protein: 21
+   protein: 21, 
+   price: 11.00
   },  
   {
     smoothie_name: 'Tropical Shredder',
@@ -77,7 +84,8 @@ const smoothieData = [
     calories: 280,
     fat: 10,
    carbohydrates: 24,
-   protein: 22
+   protein: 22, 
+   price: 11.00
   },  
   {
     smoothie_name: 'PB Cup Lite',
@@ -86,7 +94,8 @@ const smoothieData = [
     calories: 270,
     fat: 6,
    carbohydrates: 28,
-   protein: 27
+   protein: 27, 
+   price: 11.00
   },  
 
 
@@ -98,7 +107,8 @@ const smoothieData = [
     calories: 520,
     fat: 22,
    carbohydrates: 31,
-   protein: 50
+   protein: 50, 
+   price: 11.00
   },  
   {
     smoothie_name: 'The Caffeinator',
@@ -107,7 +117,8 @@ const smoothieData = [
     calories: 280,
     fat: 5,
    carbohydrates: 25,
-   protein: 32
+   protein: 32, 
+   price: 11.00
   },  
   {
     smoothie_name: 'Chocolate Thinny Mint',
@@ -116,7 +127,8 @@ const smoothieData = [
     calories: 320,
     fat: 7,
    carbohydrates: 33,
-   protein: 31
+   protein: 31, 
+   price: 11.00
   },  
 
 
@@ -133,7 +145,8 @@ const smoothieData = [
     calories: 320,
     fat: 2,
    carbohydrates: 54,
-   protein: 21
+   protein: 21, 
+   price: 11.00
   },  
 
   {
@@ -143,7 +156,8 @@ const smoothieData = [
     calories: 330,
     fat: 4.5,
    carbohydrates: 49,
-   protein: 21
+   protein: 21, 
+   price: 11.00
   },  
 
 
@@ -155,7 +169,8 @@ const smoothieData = [
     calories: 330,
     fat: 2.5,
    carbohydrates: 55,
-   protein: 22
+   protein: 22,
+   price: 11.00
   },  
 
   {
@@ -165,7 +180,8 @@ const smoothieData = [
     calories: 340,
     fat: 4.5,
    carbohydrates: 51,
-   protein: 23
+   protein: 23, 
+   price: 11.00
   },  
 
 // used I love veggies
@@ -176,7 +192,8 @@ const smoothieData = [
     calories: 320,
     fat: 4,
    carbohydrates: 51,
-   protein: 22
+   protein: 22, 
+   price: 11.00
   },  
 
 
@@ -187,7 +204,8 @@ const smoothieData = [
     calories: 390,
     fat: 12,
    carbohydrates: 32,
-   protein: 39
+   protein: 39, 
+   price: 11.00
   },  
 
   {
@@ -197,14 +215,16 @@ const smoothieData = [
     calories: 340,
     fat: 6,
    carbohydrates: 44,
-   protein: 28
+   protein: 28, 
+   price: 11.00
   },  
 
 //   cant find
   {
     smoothie_name: 'Peaches N Cream',
     description: "Peaches, Pears, Apricots, Strawberries & Banana with Vanilla Whey Protein",
-    image: "https://i.imgur.com/BRJLVOj.jpg"
+    image: "https://i.imgur.com/BRJLVOj.jpg", 
+    price: 11.00
   }, 
 
 
@@ -216,7 +236,8 @@ const smoothieData = [
     calories: 320,
     fat: 4.5,
    carbohydrates: 40,
-   protein: 29
+   protein: 29, 
+   price: 11.00
   }, 
 
 
@@ -228,7 +249,8 @@ const smoothieData = [
     calories: 290,
     fat: 10,
    carbohydrates: 13,
-   protein: 39
+   protein: 39, 
+   price: 11.00
   }, 
 
   {
@@ -238,7 +260,8 @@ const smoothieData = [
     calories: 290,
     fat: 10,
    carbohydrates: 13,
-   protein: 39
+   protein: 39, 
+   price: 11.00
   },  
 
 
@@ -251,7 +274,8 @@ const smoothieData = [
     calories: 500,
     fat: 14,
    carbohydrates: 57,
-   protein: 38
+   protein: 38, 
+   price: 11.00
   },   
 
 
@@ -263,7 +287,8 @@ const smoothieData = [
     calories: 340,
     fat: 9,
    carbohydrates: 25,
-   protein: 37
+   protein: 37, 
+   price: 11.00
   },  
 
 
@@ -275,7 +300,8 @@ const smoothieData = [
     calories: 530,
     fat: 22,
    carbohydrates: 34,
-   protein: 49
+   protein: 49, 
+   price: 11.00
   },  
 
   // banana nut blast
@@ -286,7 +312,8 @@ const smoothieData = [
     calories: 520,
     fat: 22,
    carbohydrates: 31,
-   protein: 50
+   protein: 50, 
+   price: 11.00
   },  
 
   {
@@ -296,7 +323,8 @@ const smoothieData = [
     calories: 650,
     fat: 21,
    carbohydrates: 85,
-   protein: 32
+   protein: 32, 
+   price: 11.00
   },  
 
   {
@@ -306,7 +334,8 @@ const smoothieData = [
     calories: 520,
     fat: 22,
    carbohydrates: 31,
-   protein: 50
+   protein: 50, 
+   price: 11.00
   },  
 
 
@@ -318,7 +347,8 @@ const smoothieData = [
     calories: 340,
     fat: 7,
    carbohydrates: 28,
-   protein: 41
+   protein: 41, 
+   price: 11.00
   },  
 
   // no idea what to use used just random fill in data
@@ -329,7 +359,8 @@ const smoothieData = [
     calories: 290,
     fat: 10,
    carbohydrates: 13,
-   protein: 39
+   protein: 39, 
+   price: 11.00
   },   
 
 
@@ -338,13 +369,15 @@ const smoothieData = [
     smoothie_name: 'The amazing Acai Bowl',
     description: "Mixed Berries & Acai blended with Yogurt & topped with Banana, Coconut, Cacao Nibs, Berry Coconut Granola, Almond Butter, Chia Seeds & a drizzle of Honey ",
     image: "https://i.imgur.com/jcMeFgA.jpg", 
+    price: 10.00
     
   },   
 
   {
     smoothie_name: 'The Tropical Veggie Bliss Bowl',
     description: "Mangoes, Pineapple, Kale, Spinach & Lemon blended with Yogurt & topped with Banana, Coconut, Berry Coconut Granola & a drizzle of Honey ",
-    image: "https://i.imgur.com/jcMeFgA.jpg", 
+    image: "https://i.imgur.com/jcMeFgA.jpg",  
+    price: 10.00
     
   },  
 ];
