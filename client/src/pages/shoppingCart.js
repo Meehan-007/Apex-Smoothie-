@@ -7,8 +7,16 @@ const ShoppingCart = () => {
   const [showItem, setShowItem] = useState(false)  
   const [total, setTotal] = useState(0); 
  
+console.log(cartItems); 
 
  
+
+  const handleDeleteItem = (index) => {
+    const updatedCart = cartItems.filter((_, itemIndex) => itemIndex !== index);
+    setCartItems(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
+  
   
  
 
@@ -22,7 +30,7 @@ const ShoppingCart = () => {
 
   useEffect(() => { 
     let calculatedTotal = 0; 
-    let stripeTotal = 0; 
+     
     cartItems.forEach((item) => {
       calculatedTotal += parseFloat(item.price);
     }); 
@@ -32,16 +40,17 @@ const ShoppingCart = () => {
    
 
   }, [cartItems]);
-
+  
   return (
     <div style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}> 
     {cartItems.length > 0 ? (
       <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc' }}>
         <h2>Shopping Cart</h2>
-        {cartItems.map((item) => (
-          <div key={item.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
+        {cartItems.map((item, index) => (
+          <div key={index}  style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
             <p>{item.smoothie_name}</p>
            <p> ${parseFloat(item.price).toFixed(2)} </p> 
+           <button onClick={() => handleDeleteItem(index)}>Delete</button>
           </div>
         ))}
         <div style={{ borderTop: '1px solid #ccc', marginTop: '10px', paddingTop: '10px' }}>
