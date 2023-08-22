@@ -11,8 +11,8 @@ const stripeTestPromise = loadStripe(Public_Key)
 export default function StripeContainer({total}) { 
     console.log(total)
     return (
-        <Elements stripe={stripeTestPromise}> 
-            < PaymentForm total={total} />
+        <Elements  stripe={stripeTestPromise}> 
+            < PaymentForm  total={total} />
 
         </Elements>
     )

@@ -7,18 +7,18 @@ const CARD_OPTIONS = {
 	iconStyle: "solid",
 	style: {
 		base: {
-			iconColor: "#c4f0ff",
+			iconColor: "grey",
 			color: "#000000",
 			fontWeight: 500,
 			fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
 			fontSize: "16px",
 			fontSmoothing: "antialiased",
-			":-webkit-autofill": { color: "#fce883" },
-			"::placeholder": { color: "#87bbfd" }
+			":-webkit-autofill": { color: "grey" },
+			"::placeholder": { color: "grey" }
 		},
 		invalid: {
-			iconColor: "#ffc7ee",
-			color: "#ffc7ee"
+			iconColor: "grey",
+			color: "grey"
 		}
 	}
 }
@@ -64,13 +64,13 @@ export default function PaymentForm({total}) {
     return (
         <>
         {!success ? 
-        <form onSubmit={handleSubmit}>
-            <fieldset className="FormGroup">
+        <form  className="col space_center w-100" onSubmit={handleSubmit} >
+            <fieldset  className="FormGroup w-50">
                 <div className="FormRow">
                     <CardElement options={CARD_OPTIONS}/>
                 </div>
             </fieldset>
-            <button>Pay</button>
+            <button className="buttonLarge margin-top-XL">Pay</button>
         </form>
         :
        <div>
