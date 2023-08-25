@@ -1,9 +1,9 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import './index.css' 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Nav';
-
+import ShoppingCart from './pages/shoppingCart';
 import Home from './pages/Home'; 
 import About from './pages/About'; 
 
@@ -12,7 +12,8 @@ import Rewards from './pages/Rewards';
 
 import NoMatch from './pages/NoMatch';
 import SmoothieInfo from './pages/SmoothieInfo'; 
-import ShoppingCart from './pages/shoppingCart';
+
+
 
 
 

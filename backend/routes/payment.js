@@ -28,7 +28,12 @@ router.post("/", async (req, res) => {
 			success: false
 		})
 	}
-}) 
+})  
+
+app.get('/secret', async (req, res) => {
+	const intent = // ... Fetch or create the PaymentIntent
+	res.json({client_secret: intent.client_secret});
+  });
 
 
 module.exports = router;
