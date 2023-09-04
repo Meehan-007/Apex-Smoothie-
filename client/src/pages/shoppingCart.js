@@ -1,43 +1,49 @@
 import React, { useEffect, useState } from 'react';
 // import StripeContainer from '../components/stripecontainer'; 
-import CheckoutForm from "../components/paymentform";
+import CheckoutForm from "../components/CheckoutForm";
 import { MdClose } from "react-icons/md"
 import { Elements } from "@stripe/react-stripe-js"; 
-import {loadStripe} from '@stripe/stripe-js';
 
-const ShoppingCart = () => {
+
+const ShoppingCart = (props) => { 
+
+  const { stripePromise } = props;
+  const [ clientSecret, setClientSecret ] = useState('');
   const [cartItems, setCartItems] = useState([]);
   // const [showItem, setShowItem] = useState(false)
   const [total, setTotal] = useState(0);
   // const [amount, setAmount] = useState(1); 
 
-
-  const stripePromise = loadStripe("pk_test_51Mz617JMbYrxGFszH51PBnJrTKtOZgdjqoeHQGPDCj9PXTQoo0qNrbagWQkvt74Pa2YanMmAs4om52L1conizo3I00T5yQCSCS") 
-  
-  const [clientSecret, setClientSecret] = useState("");
-
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:3001/payment", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" }, 
-      body: JSON.stringify({ amount: total }),
-    })
+    fetch("/create-payment-intent")
       .then((res) => res.json())
-      .then((data) => {
-        const clientSecret = data.clientSecret;
+      .then(({clientSecret}) => setClientSecret(clientSecret));
+  }, []);
+  
+
+  // useEffect(() => {
+  //   // Create PaymentIntent as soon as the page loads
+  //   fetch("http://localhost:3001/payment", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" }, 
+  //     body: JSON.stringify({ amount: total }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const clientSecret = data.clientSecret;
         
 
-      });
-  }, [total]);
+  //     });
+  // }, [total]);
 
 
-  const options = {
-    // passing the client secret obtained in step 3
-    clientSecret: '{{CLIENT_SECRET}}',
-    // Fully customizable with appearance API.
-    appearance: {/*...*/},
-  };
+  // const options = {
+  //   // passing the client secret obtained in step 3
+  //   clientSecret: '{{CLIENT_SECRET}}',
+  //   // Fully customizable with appearance API.
+  //   appearance: {/*...*/},
+  // };
   const handleDeleteItem = (index) => {
     const updatedCart = cartItems.filter((_, itemIndex) => itemIndex !== index);
 
@@ -97,11 +103,11 @@ const ShoppingCart = () => {
               <p>Total: ${(total / 100).toFixed(2)}</p>
             </div> 
            
-            {clientSecret && (
-            <Elements options={options} stripe={stripePromise}>
-              <CheckoutForm />
-            </Elements>
-          )}
+            {clientSecret && stripePromise && (
+        <Elements stripe={stripePromise} options={{ clientSecret, }}>
+          <CheckoutForm />
+        </Elements>
+      )}
             {/* <button class="buttonLarge" onClick={() => setShowItem(true)}>Purchase</button> */}
           </div>
 
