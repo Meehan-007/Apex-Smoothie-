@@ -56,7 +56,7 @@ export default function CheckoutForm() {
         // options={{defaultValues: {email: 'foo@bar.com'}}}
         />
       <PaymentElement id="payment-element" />
-      <button disabled={isLoading || !stripe || !elements} id="submit">
+      <button className='buttonLarge' disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>

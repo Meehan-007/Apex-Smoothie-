@@ -26,30 +26,10 @@ const ShoppingCart = (props) => {
       .then((res) => res.json())
       .then(({clientSecret}) => setClientSecret(clientSecret));
   }, []);
-  
-
-  // useEffect(() => {
-  //   // Create PaymentIntent as soon as the page loads
-  //   fetch("http://localhost:3001/payment", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" }, 
-  //     body: JSON.stringify({ amount: total }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const clientSecret = data.clientSecret;
-        
-
-  //     });
-  // }, [total]);
 
 
-  // const options = {
-  //   // passing the client secret obtained in step 3
-  //   clientSecret: '{{CLIENT_SECRET}}',
-  //   // Fully customizable with appearance API.
-  //   appearance: {/*...*/},
-  // };
+
+ 
   const handleDeleteItem = (index) => {
     const updatedCart = cartItems.filter((_, itemIndex) => itemIndex !== index);
 
@@ -83,16 +63,16 @@ const ShoppingCart = (props) => {
   }, [cartItems]);
 
   return (
-    <div style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div   style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
 
      
        
       
         {cartItems.length > 0 ? (
-          <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc' }} >
+          <div className="margin-top-XXL" style={{ width: '300px', padding: '20px', border: '1px solid #ccc' }} >
             <h2>Shopping Cart</h2>
             {cartItems.map((item, index) => (
-              <div key={index} className='row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
+              <div key={index} className='margin-top-L row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
 
                 <div>
                   <p>{item.smoothie_name}</p>

@@ -45,16 +45,48 @@ router.get('/config', (req, res) => {
 	});
   });
   
-  router.get('/create-payment-intent', async (req, res) => {
+
+
+
+router.get('/create-payment-intent', async (req, res) => {
 	// Create a PaymentIntent with the amount, currency, and a payment method type.
-	//
+	// how do i bring in the items and find their ids and get their price? 
+
 	// See the documentation [0] for the full list of supported parameters.
 	//
-	// [0] https://stripe.com/docs/api/payment_intents/create
-	try {
+	// [0] https://stripe.com/docs/api/payment_intents/create 
+
+
+	try { 
+
+		// get the category ids 
+		// grab prices 
+		// sum up prices 
+
+		// const getItemPrices = (itemIds) => {
+		// 	// This is a mock implementation; replace it with your data retrieval logic. 
+
+		// 	if(item[i].category_name === "Iced Refresher"){
+		// 		const price = 600
+		// 	}  
+
+		// 	if(item[i].category_name === "Crushed Fruit Bowl"){
+		// 		const price = 1000
+		// 	}  
+
+		// 	else {
+		// 		const price = 1100 
+		// 	}
+
+		// 	const itemPrices = {
+		// 	  item1: 999,  // Price of item with ID 'item1' in cents (e.g., $9.99).
+		// 	  item2: 599,  // Price of item with ID 'item2' in cents (e.g., $5.99).
+		// 	  // Add more item prices here...
+		// 	}; 
+
 	  const paymentIntent = await stripe.paymentIntents.create({
 		currency: 'EUR',
-		amount: 1999,
+		amount: total,
 		automatic_payment_methods: { enabled: true }
 	  });
   
@@ -62,19 +94,18 @@ router.get('/config', (req, res) => {
 	  res.send({
 		clientSecret: paymentIntent.client_secret,
 	  });
-	} catch (e) {
+	}
+ 
+  catch (e) {
 	  return res.status(400).send({
 		error: {
 		  message: e.message,
 		},
 	  });
 	}
-  });
+  
+});
 
-// app.get('/secret', async (req, res) => {
-// 	const intent = // ... Fetch or create the PaymentIntent
-// 	res.json({client_secret: intent.client_secret});
-//   });
 
 
 module.exports = router;
