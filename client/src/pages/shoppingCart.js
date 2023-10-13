@@ -1,17 +1,48 @@
 import React, { useEffect, useState } from 'react';
-import StripeContainer from '../components/stripecontainer';
+// import StripeContainer from '../components/stripecontainer'; 
+import CheckoutForm from "../components/CheckoutForm";
 import { MdClose } from "react-icons/md"
+import { Elements } from "@stripe/react-stripe-js"; 
 
-const ShoppingCart = () => {
+
+const ShoppingCart = (props) => { 
+
+  const { stripePromise } = props;
+  const [ clientSecret, setClientSecret ] = useState('');
   const [cartItems, setCartItems] = useState([]);
   const [showItem, setShowItem] = useState(false)
   const [total, setTotal] = useState(0);
   // const [amount, setAmount] = useState(1); 
 
-  console.log(cartItems);
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    const API_URL = process.env.NODE_ENV === 'production'
+    ? 'https://apex-smoothies.herokuapp.com/'
+    : 'http://localhost:3001/';  
+    console.log(total); 
+  
+      fetch(`${API_URL}payment/create-payment-intent?amount=${total}`)
+      .then((res) => res.json())
+      .then(({clientSecret}) => setClientSecret(clientSecret));
+  }, [total]);
+
+  // useEffect(() => {
+  //   // Create PaymentIntent as soon as the page loads
+  //   fetch("http://localhost:3001/payment", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" }, 
+  //     body: JSON.stringify({ amount: total }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const clientSecret = data.clientSecret;
 
 
+  //     });
+  // }, [total]);
 
+
+ 
   const handleDeleteItem = (index) => {
     const updatedCart = cartItems.filter((_, itemIndex) => itemIndex !== index);
 
@@ -19,15 +50,7 @@ const ShoppingCart = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
-  // const handleQuantityChange = (index, newAmount) => {
-  //   const updatedCart = cartItems.map((item, itemIndex) => {
-  //     if (itemIndex === index) {
-  //       return { ...item, amount: newAmount };
-  //     }
-  //     return item;
-  //   });
-  //   setCartItems(updatedCart);
-  // };
+
 
 
 
@@ -53,43 +76,44 @@ const ShoppingCart = () => {
   }, [cartItems]);
 
   return (
-    <div style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div   style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+
+     
+       
       
-        {
-          showItem ? (
-          <StripeContainer total = { total } />  
-           ) : ( 
-            <>
-            {cartItems.length > 0 ? (
-              <div style = {{ width: '300px', padding: '20px', border: '1px solid #ccc' }} >
-        <h2>Shopping Cart</h2>
-          {cartItems.map((item, index) => (
-          <div key={index} className='row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
+        {cartItems.length > 0 ? (
+          <div className="margin-top-XXL" style={{ width: '300px', padding: '20px', border: '1px solid #ccc' }} >
+            <h2>Shopping Cart</h2>
+            {cartItems.map((item, index) => (
+              <div key={index} className='margin-top-L row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
 
-            <div>
-              <p>{item.smoothie_name}</p>
-              <p>${parseFloat(item.price).toFixed(2)}</p>
-            </div>
+                <div>
+                  <p>{item.smoothie_name}</p>
+                  <p>${parseFloat(item.price).toFixed(2)}</p>
+                </div>
 
-            <button style={{ width: '28px', height: '28px' }} onClick={() => handleDeleteItem(index)}><MdClose style={{ color: "grey", width: '22px', height: '22px' }} className='icon-size' /></button>
+                <button style={{ width: '28px', height: '28px' }} onClick={() => handleDeleteItem(index)}><MdClose style={{ color: "grey", width: '22px', height: '22px' }} className='icon-size' /></button>
 
-            {/* <button onClick={() => handleQuantityChange(index, item.amount - 1)}>Subtract</button>
-              <p>{item.amount}</p>
-              <button onClick={() => handleQuantityChange(index, item.amount + 1)}>Add</button>  */}
+              
 
+              </div>
+            ))}
+            <div className='margin-top-M margin-bottom-S'>
+              <p>Total: ${(total / 100).toFixed(2)}</p>
+            </div> 
+          <> 
+            {clientSecret && stripePromise && (
+        <Elements stripe={stripePromise} options={{ clientSecret, }}>
+          <CheckoutForm />
+        </Elements>
+      )} 
+      </> 
+            {/* <button class="buttonLarge" onClick={() => setShowItem(true)}>Purchase</button> */}
           </div>
-        ))}
-      <div className='margin-top-M margin-bottom-S'>
-        <p>Total: ${(total / 100).toFixed(2)}</p>
-      </div>
-      <button class="buttonLarge" onClick={() => setShowItem(true)}>Purchase</button>
-    </div> 
-    
-  ) : (
-    <p>Your cart is empty.</p>
-  )} 
-  </>
-)}
+
+        ) : (
+          <p>Your cart is empty.</p>
+        )}
     </div >
   );
 };
