@@ -7,8 +7,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 const ShoppingCart = (props) => { 
 
-  const { stripePromise } = props; 
-  console.log(stripePromise)
+  const { stripePromise } = props;
   const [ clientSecret, setClientSecret ] = useState('');
   const [cartItems, setCartItems] = useState([]);
   // const [showItem, setShowItem] = useState(false)
@@ -16,13 +15,8 @@ const ShoppingCart = (props) => {
   // const [amount, setAmount] = useState(1); 
 
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads 
-
-    const API_URL = process.env.NODE_ENV === 'production'
-  ? 'https://apex-smoothies.herokuapp.com/'
-  : 'http://localhost:3001/'; 
-
-    fetch(`${API_URL}payment/create-payment-intent`)
+    // Create PaymentIntent as soon as the page loads
+    fetch("/create-payment-intent")
       .then((res) => res.json())
       .then(({clientSecret}) => setClientSecret(clientSecret));
   }, []);
@@ -88,13 +82,12 @@ const ShoppingCart = (props) => {
             <div className='margin-top-M margin-bottom-S'>
               <p>Total: ${(total / 100).toFixed(2)}</p>
             </div> 
-           <> 
+           
             {clientSecret && stripePromise && (
         <Elements stripe={stripePromise} options={{ clientSecret, }}>
           <CheckoutForm />
         </Elements>
-      )} 
-      </>
+      )}
             {/* <button class="buttonLarge" onClick={() => setShowItem(true)}>Purchase</button> */}
           </div>
 
