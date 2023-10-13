@@ -13,14 +13,14 @@ const PORT = process.env.PORT || 3001;
 const app = express(); 
 
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2020-08-27',
-  appInfo: { // For sample support and debugging, not required for production:
-    name: "stripe-samples/accept-a-payment/payment-element",
-    version: "0.0.2",
-    url: "https://github.com/stripe-samples"
-  }
-});
+// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+//   apiVersion: '2020-08-27',
+//   appInfo: { // For sample support and debugging, not required for production:
+//     name: "stripe-samples/accept-a-payment/payment-element",
+//     version: "0.0.2",
+//     url: "https://github.com/stripe-samples"
+//   }
+// });
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(cors({
     origin: 'http://localhost:3000'
   })); 
-  app.use(express.static(process.env.STATIC_DIR));
+  // app.use(express.static(process.env.STATIC_DIR));
 } 
 
 
@@ -58,46 +58,10 @@ app.use(bodyParser.json());
 app.use(routes); 
 
 
-
-
-app.get('/', (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + '/index.html');
-  res.sendFile(path);
-});
-
-app.get('/config', (req, res) => {
-  res.send({
-    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  });
-});
-
-app.get('/create-payment-intent', async (req, res) => {
-  // Create a PaymentIntent with the amount, currency, and a payment method type.
-  //
-  // See the documentation [0] for the full list of supported parameters.
-  //
-  // [0] https://stripe.com/docs/api/payment_intents/create
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      currency: 'EUR',
-      amount: 1999,
-      automatic_payment_methods: { enabled: true }
-    });
-
-    // Send publishable key and PaymentIntent details to client
-    res.send({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (e) {
-    return res.status(400).send({
-      error: {
-        message: e.message,
-      },
-    });
-  }
-});
-
-
+// app.get('/', (req, res) => {
+//   const path = resolve(process.env.STATIC_DIR + '/index.html');
+//   res.sendFile(path);
+// });
 
 // Expose a endpoint as a webhook handler for asynchronous events.
 // Configure your webhook in the stripe developer dashboard
