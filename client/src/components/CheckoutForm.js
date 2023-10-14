@@ -1,6 +1,7 @@
 import {
   PaymentElement,
-  LinkAuthenticationElement
+  LinkAuthenticationElement, 
+  ExpressCheckoutElement
 } from '@stripe/react-stripe-js'
 import {useState} from 'react'
 import {useStripe, useElements} from '@stripe/react-stripe-js';
@@ -18,7 +19,10 @@ export default function CheckoutForm() {
       // Stripe.js has not yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
       return;
-    }
+    } 
+
+   
+    
 
     setIsLoading(true);
 
@@ -41,8 +45,14 @@ export default function CheckoutForm() {
       setMessage("An unexpected error occured.");
     }
 
-    setIsLoading(false);
+    setIsLoading(false); 
+
+
   }
+
+
+
+
 
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
@@ -55,7 +65,10 @@ export default function CheckoutForm() {
         // Prefill the email field like so:
         // options={{defaultValues: {email: 'foo@bar.com'}}}
         />
-      <PaymentElement id="payment-element" />
+      <PaymentElement id="payment-element" /> 
+
+     
+
       <button className='buttonLarge' disabled={isLoading || !stripe || !elements} id="submit">
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}

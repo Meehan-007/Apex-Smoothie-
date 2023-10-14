@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'; 
 import { Link } from 'react-router-dom'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SmoothieCards = ({ IcedRefreshersRef, LightIntensityRef, MediumIntensityRef, HighIntensityRef, CrushedFruitBowlsRef, categories }) => {
 
@@ -8,11 +11,16 @@ const SmoothieCards = ({ IcedRefreshersRef, LightIntensityRef, MediumIntensityRe
   const addToCart = (smoothie) => {
     const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
     existingCart.push({ smoothie_name: smoothie.smoothie_name, price: smoothie.price });
-    localStorage.setItem('cart', JSON.stringify(existingCart));
+    localStorage.setItem('cart', JSON.stringify(existingCart)); 
+    toast.success('added to your cart!', {
+      position: 'top-center', // You can change the position
+      autoClose: 2000, // Set the notification auto-close duration in milliseconds
+    });
   };
 
   return (
-    <div>
+    <div> 
+      <ToastContainer />
       {categories.map((category, index) => (
        <div key={index} ref={categoriesRefs[index]} className='left col tablet-center TabletS-w-100' >
        <h4 className='margin-top-XL'>{category.category_name}</h4>

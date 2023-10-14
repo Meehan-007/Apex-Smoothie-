@@ -16,15 +16,18 @@ function Completion(props) {
         <>&gt; Payment {paymentIntent.status}: <a href={`https://dashboard.stripe.com/test/payments/${paymentIntent.id}`} target="_blank" rel="noreferrer">{paymentIntent.id}</a></>
       ));
     });
-  }, [stripePromise]);
+  }, [stripePromise]); 
+
+  localStorage.clear()
 
   return (
-    <>
-      <h1>Thank you!</h1>
-      <a href="/">home</a>
-      <div id="messages" role="alert" style={messageBody ? {display: 'block'} : {}}>{messageBody}</div>
+    <> 
+    <div className='w-100 center'> 
+      <h1 className='margin-top-XXL w-100 textcenter' >Thank you! payment was successful</h1>
+      </div>
+   
     </>
   );
 }
-
+{/* <div id="messages" role="alert" style={messageBody ? {display: 'block'} : {}}>{messageBody}</div> */}
 export default Completion;
