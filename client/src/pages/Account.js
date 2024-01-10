@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../assests/logo.png' 
 import search from '../assests/Search.jpg' 
-import profile_icon from '../assests/profile.png' 
+import profile_icon from '../assests/Profile.png' 
 
 //import Auth from '../utils/Auth'; 
 

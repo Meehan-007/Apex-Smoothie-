@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRef } from 'react'; 
 
+
 import SmoothieCards from '../components/SmoothieCard' 
-import Smoothiecover2 from '../assests/Smoothiecover2.jpeg' 
+import SmoothieCover2 from '../assests/SmoothieCover2.jpeg' 
 import SecondaryNavigation from '../components/SecondaryNavigation'
 import HeroCover2 from '../components/SmoothieHero2'; 
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
-import calories from '../assests/calories.webp' 
-import fat from '../assests/fat.webp' 
-import protein from '../assests/protein.jpg'  
-import carbs from '../assests/carbs.jpg' 
+import calories from '../assests/Calories.webp' 
+import fat from '../assests/Fat.webp' 
+import protein from '../assests/Protein.jpg'  
+import carbs from '../assests/Carbs.jpg' 
 
 
 

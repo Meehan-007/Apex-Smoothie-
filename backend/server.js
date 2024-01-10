@@ -6,7 +6,7 @@ const env = require('dotenv').config({path: './.env'});
 
 const bodyParser = require("body-parser") 
 
-const sequelize = require('./config/connection');
+const sequelize = require('./config/Connection');
 
 
 const PORT = process.env.PORT || 3001;

@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { Link } from 'react-router-dom'; 
 
-import logo from '../assests/logo.png' 
+import logo from '../assests/Logo.png' 
 import search from '../assests/Search.jpg' 
-import profile_icon from '../assests/profile.png'  
+import profile_icon from '../assests/Profile.png'  
 import { MdClose } from "react-icons/md"
 import { FiMenu } from "react-icons/fi" 
 import {BiSearch} from  "react-icons/bi" 

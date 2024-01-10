@@ -1,7 +1,7 @@
 const router = require('express').Router(); 
-const sequelize = require('../../config/connection'); 
+const sequelize = require('../../config/Connection'); 
 const { Op } = require("sequelize");
-const { Smoothie, Category, SmoothieCategory } = require('../../models');
+const { Smoothie, Category, SmoothieCategory } = require('../../models/Index');
 
 
 

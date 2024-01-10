@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Smoothieinfo = () => {
+const SmoothieInfo = () => {
   const { id } = useParams();
   const [Smoothies, setSmoothies] = useState([]); 
 
@@ -80,4 +80,4 @@ const Smoothieinfo = () => {
     );
   };
   
-  export default Smoothieinfo;
+  export default SmoothieInfo;

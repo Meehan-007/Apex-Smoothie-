@@ -78,4 +78,5 @@ export default function CheckoutForm() {
       {message && <div id="payment-message">{message}</div>}
     </form>
   )
-}
+}; 
+

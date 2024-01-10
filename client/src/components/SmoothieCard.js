@@ -2,16 +2,32 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useCart } from '../contexts/CartContext';
 
 
 const SmoothieCards = ({ IcedRefreshersRef, LightIntensityRef, MediumIntensityRef, HighIntensityRef, CrushedFruitBowlsRef, categories }) => {
 
-  const categoriesRefs = [IcedRefreshersRef, LightIntensityRef, MediumIntensityRef, HighIntensityRef, CrushedFruitBowlsRef]; 
+  const { state, dispatch } = useCart(); 
 
-  const addToCart = (smoothie) => {
-    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
-    existingCart.push({ smoothie_name: smoothie.smoothie_name, price: smoothie.price });
-    localStorage.setItem('cart', JSON.stringify(existingCart)); 
+  const categoriesRefs = [IcedRefreshersRef, LightIntensityRef, MediumIntensityRef, HighIntensityRef, CrushedFruitBowlsRef]; 
+  
+   
+
+
+  // const addToCart = (smoothie) => {
+  //   const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+  //   existingCart.push({ smoothie_name: smoothie.smoothie_name, price: smoothie.price });
+  //   localStorage.setItem('cart', JSON.stringify(existingCart)); 
+  //   toast.success('added to your cart!', {
+  //     position: 'top-center', // You can change the position
+  //     autoClose: 2000, // Set the notification auto-close duration in milliseconds
+  //   });
+  // }; 
+
+  const handleAddToCart = (smoothie) => { 
+    console.log("adding your smoothie")
+    dispatch( {type: 'ADD_TO_CART', payload: smoothie });
+    // addToCart({ id, smoothie_name: smoothie.smoothie_name, price: smoothie.price});
     toast.success('added to your cart!', {
       position: 'top-center', // You can change the position
       autoClose: 2000, // Set the notification auto-close duration in milliseconds
@@ -36,7 +52,7 @@ const SmoothieCards = ({ IcedRefreshersRef, LightIntensityRef, MediumIntensityRe
              <div className='margin-bottom-M w-90 row space_between padding-bottom-M mobile-col-reverse'> 
             
                <button className="buttonSmallSecondary mobile-w-100 mobile-margin-top"> <Link to={`/SmoothieInfo/${smoothie.id}`} className='w-100 buttonLink'> Learn more </Link></button> 
-               <button className="buttonSmall mobile-w-100"  onClick={() => addToCart(smoothie)}> Add to Cart </button>
+               <button className="buttonSmall mobile-w-100"  onClick={() => handleAddToCart(smoothie)}> Add to Cart </button>
                </div>
            </section>
          ))}

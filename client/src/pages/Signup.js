@@ -1,8 +1,8 @@
 import React from 'react';
 
-import logo from '../assests/logo.png' 
-import apple from '../assests/.root/apple.jpg'  
-import google from '../assests/.root/google.jpg'  
+import logo from '../assests/Logo.png' 
+import apple from '../assests/.root/Apple.jpg'  
+import google from '../assests/.root/Google.jpg'  
 import facebook from '../assests/.root/Vector.jpg' 
  
 

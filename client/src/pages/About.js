@@ -2,9 +2,9 @@ import React from 'react';
  
 
 
-import homecover from '../assests/homecover.JPG' 
-import aboutphoto1 from '../assests/aboutphoto1.JPG' 
-import aboutphoto2 from '../assests/aboutphoto2.JPG'
+import homeCover from '../assests/HomeCover.JPG' 
+import aboutPhoto1 from '../assests/AboutPhoto1.JPG' 
+import aboutPhoto2 from '../assests/AboutPhoto2.JPG' 
 
 
 
@@ -16,7 +16,7 @@ const about = () => {
        <> 
        {/* this is to provide a buffer so the image does not go under the navigation because the nav has a z index */}
 <div className='web-none TabletS-show' id='buffer' style={{ "width" : "100%"}}> </div>
-      <img className="w-100" src={homecover} alt="smoothie" /> 
+      <img className="w-100" src={homeCover} alt="smoothie" /> 
       
 
       <section className='pagemarginleft pagemarginright space_center col margin-top-M paddingbottom'> 
@@ -32,8 +32,8 @@ We use only the freshest and highest quality ingredients in our smoothies, and e
 At Apex, we are committed to helping you achieve your fitness goals, and we believe that a healthy diet is the foundation for a healthy life. So why not try one of our delicious smoothies today and start your journey towards a healthier, happier you? </p>   
 
       <div className='row space_between margin-top-M w-90 space_evenly center tablet-col'> 
-       <img className="imagesize_cover tablet-margin-top" src={aboutphoto1} alt="apex gym" />
-       <img className="imagesize_cover tablet-margin-top" src={aboutphoto2} alt="apex gym" /> 
+       <img className="imagesize_cover tablet-margin-top" src={aboutPhoto1} alt="apex gym" />
+       <img className="imagesize_cover tablet-margin-top" src={aboutPhoto2} alt="apex gym" /> 
        </div>
 
        <h2 className='margin-top-M textcenter w-90'> Our commitment to excellence </h2>

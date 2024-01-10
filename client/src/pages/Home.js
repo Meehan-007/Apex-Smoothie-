@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; 
-import cover from '../assests/homecover.JPG' 
+import cover from '../assests/HomeCover.JPG' 
  
  
 import SmoothieCards from '../components/SmoothieCard' 

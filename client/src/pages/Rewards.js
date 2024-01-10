@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
-import cover from '../assests/rewardscover2.jpeg'
-import smoothie1 from '../assests/orange.jpg' 
-import smoothie2 from '../assests/blueberry.jpeg' 
+import cover from '../assests/RewardsCover2.jpeg'
+import smoothie1 from '../assests/Orange.jpg' 
+import smoothie2 from '../assests/BlueBerry.jpeg' 
 import smoothie3 from '../assests/Strawberry.jpg'
 
 //import Auth from '../utils/Auth'; 

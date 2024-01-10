@@ -3,77 +3,49 @@ import React, { useEffect, useState } from 'react';
 import CheckoutForm from "../components/CheckoutForm";
 import { MdClose } from "react-icons/md"
 import { Elements } from "@stripe/react-stripe-js"; 
+import { useCart } from '../contexts/CartContext';
 
 
-const ShoppingCart = (props) => { 
+const ShoppingCart = (props) => {  
+ const { state, dispatch } = useCart();
+
+console.log("here is the shopping cart", state); 
+
+
+
+
+
+
 
   const { stripePromise } = props;
   const [ clientSecret, setClientSecret ] = useState('');
-  const [cartItems, setCartItems] = useState([]);
-  const [showItem, setShowItem] = useState(false)
-  const [total, setTotal] = useState(0);
-  // const [amount, setAmount] = useState(1); 
+ 
+ 
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     const API_URL = process.env.NODE_ENV === 'production'
     ? 'https://apex-smoothies.herokuapp.com/'
     : 'http://localhost:3001/';  
-    console.log(total); 
+    console.log('front end total', state.total); 
   
-      fetch(`${API_URL}payment/create-payment-intent?amount=${total}`)
+    // `REACT_APP_API_URL`
+      fetch(`${API_URL}payment/create-payment-intent?amount=${state.total}`)
       .then((res) => res.json())
       .then(({clientSecret}) => setClientSecret(clientSecret));
-  }, [total]);
-
-  // useEffect(() => {
-  //   // Create PaymentIntent as soon as the page loads
-  //   fetch("http://localhost:3001/payment", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" }, 
-  //     body: JSON.stringify({ amount: total }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const clientSecret = data.clientSecret;
-
-
-  //     });
-  // }, [total]);
-
+  }, [state.total]);
 
  
-  const handleDeleteItem = (index) => {
-    const updatedCart = cartItems.filter((_, itemIndex) => itemIndex !== index);
+  const handleDeleteItem = (smoothie) => {
 
-    setCartItems(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    dispatch( {type: 'REMOVE_FROM_CART', payload: smoothie})
   };
 
 
 
 
 
-  useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      setCartItems(JSON.parse(storedCart));
-
-    }
-  }, []);
-
-  useEffect(() => {
-    let calculatedTotal = 0;
-
-    cartItems.forEach((item) => {
-      calculatedTotal += parseFloat(item.price);
-    });
-    calculatedTotal *= 100;
-    setTotal(calculatedTotal);  // Convert the total back to a string with 2 decimal places  
-    console.log(total)
-
-
-  }, [cartItems]);
+ 
 
   return (
     <div   style={{ background: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -81,25 +53,26 @@ const ShoppingCart = (props) => {
      
        
       
-        {cartItems.length > 0 ? (
+        {state.cart.length > 0 ? (
           <div className="margin-top-XXL" style={{ width: '300px', padding: '20px', border: '1px solid #ccc' }} >
             <h2>Shopping Cart</h2>
-            {cartItems.map((item, index) => (
-              <div key={index} className='margin-top-L row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
-
+            {/* {cartItems.map((item, index) => (  */}
+               {state.cart.map((smoothie) => (
+              <div key={smoothie.id} className='margin-top-L row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}>
+               {/* <div key={item.id} className='margin-top-L row space_between' style={{ borderBottom: '1px solid #ccc', marginBottom: '10px', paddingBottom: '10px' }}> */}
                 <div>
-                  <p>{item.smoothie_name}</p>
-                  <p>${parseFloat(item.price).toFixed(2)}</p>
+                  <p>{smoothie.smoothie_name}</p>
+                  <p>${parseFloat(smoothie.price).toFixed(2)}</p>
                 </div>
 
-                <button style={{ width: '28px', height: '28px' }} onClick={() => handleDeleteItem(index)}><MdClose style={{ color: "grey", width: '22px', height: '22px' }} className='icon-size' /></button>
+                <button style={{ width: '28px', height: '28px' }} onClick={() => handleDeleteItem(smoothie)}><MdClose style={{ color: "grey", width: '22px', height: '22px' }} className='icon-size' /></button>
 
               
 
               </div>
             ))}
             <div className='margin-top-M margin-bottom-S'>
-              <p>Total: ${(total / 100).toFixed(2)}</p>
+              <p>Total: ${(state.total / 100).toFixed(2)}</p>
             </div> 
           <> 
             {clientSecret && stripePromise && (
