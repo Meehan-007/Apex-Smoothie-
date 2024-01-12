@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/Connection.js');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
-class Smoothie extends Model {}
+class Smoothie extends Model { }
 
 //update plz
 
@@ -15,39 +15,39 @@ Smoothie.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    }, 
+    },
     smoothie_name: {
       type: DataTypes.STRING,
       allowNull: false
-    },  
+    },
     image: {
       type: DataTypes.STRING,
       allowNull: false
-    }, 
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false
-    }, 
-   calories: {
-     type: DataTypes.DECIMAL, 
-     
-   }, 
-   fat: {
-    type: DataTypes.DECIMAL, 
-    
-  }, 
-  carbohydrates: {
-    type: DataTypes.DECIMAL, 
-    
-  }, 
-  protein: {
-    type: DataTypes.DECIMAL, 
-    
-  }, 
-  price: {
-    type: DataTypes.DECIMAL
-  }
-    
+    },
+    calories: {
+      type: DataTypes.DECIMAL,
+
+    },
+    fat: {
+      type: DataTypes.DECIMAL,
+
+    },
+    carbohydrates: {
+      type: DataTypes.DECIMAL,
+
+    },
+    protein: {
+      type: DataTypes.DECIMAL,
+
+    },
+    price: {
+      type: DataTypes.DECIMAL
+    }
+
   },
   {
     sequelize,

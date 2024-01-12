@@ -1,12 +1,12 @@
-const router = require('express').Router(); 
-const sequelize = require('../../config/Connection'); 
+const router = require('express').Router();
+const sequelize = require('../../config/Connection');
 const { Op } = require("sequelize");
-const { Smoothie, Category, SmoothieCategory } = require('../../models/Index');
+const { Smoothie, Category, SmoothieCategory } = require('../../models');
 
 
 router.get('/', async (req, res) => {
   try {
-    
+
     const categories = await Category.findAll({
       where: {
         id: {
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
         },
         attributes: ['id', 'smoothie_name', 'image', 'description', 'price'],
       }],
-    //  order: [[Category, 'id', 'ASC']]
+      //  order: [[Category, 'id', 'ASC']]
     });
 
     console.log("Successfully retrieved categories:", categories);
@@ -38,19 +38,19 @@ router.get('/', async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-  Smoothie.findOne({ 
+  Smoothie.findOne({
     where: {
       id: req.params.id
     },
-     
-        
-      }).then(smoothie => { 
-      res.json(smoothie); 
-      
-  }) .catch (err => {
-      res.status(500).json({ message: err.message });
+
+
+  }).then(smoothie => {
+    res.json(smoothie);
+
+  }).catch(err => {
+    res.status(500).json({ message: err.message });
   });
 });
-  
+
 
 module.exports = router;

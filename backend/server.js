@@ -1,16 +1,16 @@
-const express = require('express'); 
-const routes = require('./routes'); 
-const cors = require('cors'); 
-const path = require('path'); 
-const env = require('dotenv').config({path: './.env'});
+const express = require('express');
+const routes = require('./routes');
+const cors = require('cors');
+const path = require('path');
+const env = require('dotenv').config({ path: './.env' });
 
-const bodyParser = require("body-parser") 
+const bodyParser = require("body-parser")
 
 const sequelize = require('./config/Connection');
 
 
 const PORT = process.env.PORT || 3001;
-const app = express(); 
+const app = express();
 
 
 // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
@@ -24,16 +24,16 @@ const app = express();
 
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build'))); 
+  app.use(express.static(path.join(__dirname, '../client/build')));
   app.use(cors({
     origin: 'https://apex-smoothies.herokuapp.com/'
   }));
 } else {
   app.use(cors({
     origin: 'http://localhost:3000'
-  })); 
+  }));
   // app.use(express.static(process.env.STATIC_DIR));
-} 
+}
 
 
 
@@ -55,7 +55,7 @@ app.use(bodyParser.json());
 
 
 
-app.use(routes); 
+app.use(routes);
 
 
 // app.get('/', (req, res) => {

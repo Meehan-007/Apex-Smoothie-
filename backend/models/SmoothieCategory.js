@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/Connection.js');
 
-class SmoothieCategory extends Model {}
+class SmoothieCategory extends Model { }
 
 SmoothieCategory.init(
   {
@@ -11,14 +11,14 @@ SmoothieCategory.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },   
+    },
     smoothie_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'Smoothie',
         key: 'id'
       }
-    }, 
+    },
     category_id: {
       type: DataTypes.INTEGER,
       references: {

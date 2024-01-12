@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
-import logo from '../assests/logo.png' 
-import search from '../assests/Search.jpg' 
-import profile_icon from '../assests/Profile.png' 
+import logo from '../assests/logo.png'
+import search from '../assests/Search.jpg'
+import profile_icon from '../assests/Profile.png'
 
 //import Auth from '../utils/Auth'; 
 
@@ -12,30 +12,30 @@ const Header = () => {
   //    event.preventDefault();
   //    Auth.logout();
   //  };
-  
-    return (
-      <header className="space_center">
-        <div className="space_between center w-100">
-          <Link to="/">
-            <img src={logo} alt="logo"/>
-          </Link>
-  
-          <nav className="col-3 space_evenly"> 
+
+  return (
+    <header className="space_center">
+      <div className="space_between center w-100">
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+
+        <nav className="col-3 space_evenly">
 
           <Link to="/menu">
             <h3> Menu </h3>
-          </Link> 
+          </Link>
           <Link to="/rewards">
-          <h3> Rewards </h3>
-          </Link> 
+            <h3> Rewards </h3>
+          </Link>
           <Link to="/about">
-          <h3> About </h3>
-          </Link> 
-          <img src={search} alt="search"/>
+            <h3> About </h3>
+          </Link>
+          <img src={search} alt="search" />
 
-          </nav> 
-          <div> 
-                 {/* {Auth.loggedIn() ? (
+        </nav>
+        <div>
+          {/* {Auth.loggedIn() ? (
               <>
                 <Link to="/account">
                     <img src={profile_icon} alt="account icon"/>
@@ -44,16 +44,16 @@ const Header = () => {
               </>
             ) : (
        //       <> */}
-                <Link to="/login"><h3>Login</h3></Link>
-                <Link to="/signup">
-                    <button className='buttonSmall'>Signup</button> 
-                    </Link>
-              {/* </> */}
-            {/* )}  */}
-            </div>
+          <Link to="/login"><h3>Login</h3></Link>
+          <Link to="/signup">
+            <button className='buttonSmall'>Signup</button>
+          </Link>
+          {/* </> */}
+          {/* )}  */}
         </div>
-      </header>
-    );
-  };
-  
-  export default Header;
+      </div>
+    </header>
+  );
+};
+
+export default Header;
