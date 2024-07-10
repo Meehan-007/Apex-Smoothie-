@@ -1,10 +1,15 @@
 
 const path = require('path'); 
-const env = require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); 
+const fs = require('fs');
+const env = path.resolve(__dirname, '../.env'); 
 
 const Sequelize = require('sequelize');
 
-let sequelize;
+let sequelize; 
+
+if (fs.existsSync(env)) {
+  require('dotenv').config({ path: env });
+}
 
 if (env.error) {
   throw env.error;
