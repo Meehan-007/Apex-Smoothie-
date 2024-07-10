@@ -1,6 +1,6 @@
 const seedCategories = require('./category-seeds');
 const seedSmoothies = require('./smoothie-seeds');
-const seedSmoothieCategory = require('./smoothie-Category-seeds');
+const seedSmoothieCategory = require('./smoothieCategorySeeds');
 
 const sequelize = require('../config/connection');
 

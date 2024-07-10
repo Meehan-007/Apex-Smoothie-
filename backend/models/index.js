@@ -1,7 +1,7 @@
 // import models
 const Smoothie = require('./smoothie');
-const Category = require('./category');
-const SmoothieCategory = require('./smoothieCategory');
+const Category = require('./categories');
+const SmoothieCategory = require('./smoothieCategories');
 
 
 // Products belongToMany Tags (through ProductTag)
