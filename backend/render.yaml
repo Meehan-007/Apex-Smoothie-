@@ -1,0 +1,21 @@
+services:
+  - name: backend
+    env:
+      - key: MYSQL_HOST
+        fromDatabase:
+          name: <your_mysql_database_name>
+          property: host
+      - key: MYSQL_DATABASE
+        fromDatabase:
+          name: <your_mysql_database_name>
+          property: database
+      - key: MYSQL_USER
+        fromDatabase:
+          name: <your_mysql_database_name>
+          property: user
+      - key: MYSQL_PASSWORD
+        fromDatabase:
+          name: <your_mysql_database_name>
+          property: password
+    buildCommand: npm install
+    startCommand: node backend/server.js
