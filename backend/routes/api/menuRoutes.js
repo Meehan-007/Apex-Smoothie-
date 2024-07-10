@@ -1,16 +1,18 @@
 const router = require('express').Router();
-const sequelize = require('../../config/Connection');
+const sequelize = require('../../config/connection');
 const { Op } = require("sequelize");
 const { Smoothie, Category, SmoothieCategory } = require('../../models');
 
 
+
 router.get('/', async (req, res) => {
   try {
-
+    console.log("Started the / route");
+    console.log(Category);
     const categories = await Category.findAll({
       where: {
         id: {
-          [Op.or]: [1, 2, 3]
+          [Op.or]: [4, 5, 6, 7, 8]
         }
       },
       include: [{
@@ -38,18 +40,16 @@ router.get('/', async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-  Smoothie.findOne({
-    where: {
-      id: req.params.id
-    },
+  try {
+    const smoothieId = req.params.id;
+    const smoothie = await Smoothie.findByPk(smoothieId, {
 
+    });
+    res.status(200).json(smoothie);
 
-  }).then(smoothie => {
-    res.json(smoothie);
-
-  }).catch(err => {
+  } catch (err) {
     res.status(500).json({ message: err.message });
-  });
+  }
 });
 
 

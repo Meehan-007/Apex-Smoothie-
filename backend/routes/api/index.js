@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const smoothieRoutes = require('./Home-Routes');
-const menuRoutes = require('./Menu-Routes');
+const smoothieRoutes = require('./homeRoutes');
+const menuRoutes = require('./menuRoutes');
 
 // add prefix of `/pizzas` to routes created in `pizza-routes.js`
 router.use('/smoothie', smoothieRoutes);

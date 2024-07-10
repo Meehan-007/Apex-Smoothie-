@@ -1,6 +1,7 @@
 
-const path = require('path');
-const env = require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+const path = require('path'); 
+const env = require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); 
+
 const Sequelize = require('sequelize');
 
 let sequelize;
@@ -17,9 +18,6 @@ if (process.env.JAWSDB_URL) {
     dialect: 'mysql',
     port: 3306
   });
-
-
-
 
 }
 module.exports = sequelize;

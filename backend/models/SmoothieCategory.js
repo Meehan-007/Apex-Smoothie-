@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require('../config/Connection.js');
+const sequelize = require('../config/connection.js');
 
 class SmoothieCategory extends Model { }
 

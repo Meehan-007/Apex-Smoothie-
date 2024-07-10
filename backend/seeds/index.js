@@ -1,8 +1,8 @@
 const seedCategories = require('./category-seeds');
 const seedSmoothies = require('./smoothie-seeds');
-const seedSmoothieCategory = require('./Smoothie-Category-seeds');
+const seedSmoothieCategory = require('./smoothie-Category-seeds');
 
-const sequelize = require('../config/Connection');
+const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
