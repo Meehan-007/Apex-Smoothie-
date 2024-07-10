@@ -1,5 +1,5 @@
 // import models
-const Smoothie = require('./Smoothie');
+const Smoothie = require('./smoothie');
 const Category = require('./Category');
 const SmoothieCategory = require('./SmoothieCategory');
 
