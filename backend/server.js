@@ -26,7 +26,9 @@ const app = express();
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
-  
+  app.use(cors({
+    origin: 'https://apex-smoothie.onrender.com/'
+  }));
 } else {
   app.use(cors({
     origin: 'http://localhost:3000'
