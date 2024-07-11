@@ -12,7 +12,7 @@ import SmoothieCards from '../components/SmoothieCard'
 const Home = () => {
 
   const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://apex-smoothies.herokuapp.com/'
+    ? 'https://apex-smoothie.onrender.com/'
     : 'http://localhost:3001/';
 
   const [categories, setCategories] = useState([]);

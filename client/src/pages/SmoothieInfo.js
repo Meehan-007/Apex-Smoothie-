@@ -13,7 +13,7 @@ const SmoothieInfo = () => {
   const [Smoothies, setSmoothies] = useState([]);
 
   const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://apex-smoothies.herokuapp.com/api'
+    ? 'https://apex-smoothie.onrender.com/api'
     : 'http://localhost:3001/api';
 
   useEffect(() => {

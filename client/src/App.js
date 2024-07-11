@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
 
     const API_URL = process.env.NODE_ENV === 'production'
-      ? 'https://apex-smoothies.herokuapp.com/'
+      ? 'https://apex-smoothie.onrender.com/'
       : 'http://localhost:3001/';
 
     fetch(`${API_URL}payment/config`).then(async (r) => {

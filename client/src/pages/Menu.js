@@ -14,7 +14,7 @@ import HeroCover2 from '../components/SmoothieHero2';
 const Menu = () => {
 
   const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://apex-smoothies.herokuapp.com/api'
+    ? 'https://apex-smoothie.onrender.com/'
     : 'http://localhost:3001/api';
 
   const [categories, setCategories] = useState([]);

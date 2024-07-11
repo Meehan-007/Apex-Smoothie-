@@ -25,7 +25,7 @@ const ShoppingCart = (props) => {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     const API_URL = process.env.NODE_ENV === 'production'
-      ? 'https://apex-smoothies.herokuapp.com/'
+      ? 'https://apex-smoothie.onrender.com/'
       : 'http://localhost:3001/';
     console.log('front end total', state.total);
 
