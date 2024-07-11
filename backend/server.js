@@ -61,13 +61,10 @@ app.use(routes);
 app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
-// app.get('/', (req, res) => {
-//   const path = resolve(process.env.STATIC_DIR + '/index.html');
-//   res.sendFile(path);
-// });
+
 
 // Expose a endpoint as a webhook handler for asynchronous events.
 // Configure your webhook in the stripe developer dashboard
