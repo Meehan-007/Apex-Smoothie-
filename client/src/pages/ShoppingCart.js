@@ -11,15 +11,8 @@ const ShoppingCart = (props) => {
 
   console.log("here is the shopping cart", state);
 
-
-
-
-
-
-
   const { stripePromise } = props;
   const [clientSecret, setClientSecret] = useState('');
-
 
 
   useEffect(() => {

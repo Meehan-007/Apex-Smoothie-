@@ -14,11 +14,11 @@ import HeroCover2 from '../components/SmoothieHero2';
 const Menu = () => {
 
   const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://apex-smoothie.onrender.com/'
+    ? 'https://apex-smoothie.onrender.com/api'
     : 'http://localhost:3001/api';
 
   const [categories, setCategories] = useState([]);
-
+console.log(API_URL);
   useEffect(() => {
     axios
       .get(`${API_URL}/menu`)
