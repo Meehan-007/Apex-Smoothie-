@@ -1,7 +1,8 @@
 const env = require('dotenv').config({ path: './.env' }); 
 const path = require('path');
 const express = require('express');
-const routes = require('./routes');
+const api = require('./routes/api');
+const payment = require('./routes/payment');
 const cors = require('cors');
 
 
@@ -36,11 +37,13 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use('/api', api); 
+app.use('/payment', payment);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 
-  app.get('/', (req, res) => {
+  app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html')); 
   app.use(cors({
     origin: 'https://apex-smoothie.onrender.com/'
@@ -49,7 +52,7 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
-app.use(routes);
+
 
 
 
