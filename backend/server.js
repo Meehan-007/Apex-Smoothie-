@@ -1,8 +1,8 @@
 const env = require('dotenv').config({ path: './.env' }); 
 const path = require('path');
 const express = require('express');
-const cors = require('cors');
 const routes = require('./routes');
+const cors = require('cors');
 
 
 const bodyParser = require("body-parser")
@@ -16,19 +16,7 @@ const app = express();
 
 
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-  app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-  app.use(cors({
-    origin: 'https://apex-smoothie.onrender.com/'
-  }));
-} else {
-  app.use(cors({
-    origin: 'http://localhost:3000'
-  }));
-}
+
 
 
 
@@ -44,11 +32,19 @@ app.use(
     },
   })
 );
-
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+}
 
 app.use(routes);
 
