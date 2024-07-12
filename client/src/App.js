@@ -6,7 +6,7 @@ import Header from './components/Nav';
 import { loadStripe } from '@stripe/stripe-js';
 
 // pages for paying for products 
-import ShoppingCart from './pages/renamess';
+import ShoppingCart from './pages/ShoppingCart';
 import Completion from './pages/Completion';
 import { CartProvider } from './contexts/CartContext';
 
