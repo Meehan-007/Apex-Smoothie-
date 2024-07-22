@@ -57,13 +57,6 @@ export default function CheckoutForm() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <LinkAuthenticationElement id="link-authentication-element"
-      // Access the email value like so:
-      // onChange={(event) => {
-      //  setEmail(event.value.email);
-      // }}
-      //
-      // Prefill the email field like so:
-      // options={{defaultValues: {email: 'foo@bar.com'}}}
       />
       <PaymentElement id="payment-element" />
 

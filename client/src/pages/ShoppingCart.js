@@ -74,11 +74,11 @@ const ShoppingCart = (props) => {
               </Elements>
             )}
           </>
-          {/* <button class="buttonLarge" onClick={() => setShowItem(true)}>Purchase</button> */}
+        
         </div>
 
       ) : (
-        <p>Your cart is empty.</p>
+        <p className='margin-top-XXL'>Your cart is empty.</p>
       )}
     </div >
   );

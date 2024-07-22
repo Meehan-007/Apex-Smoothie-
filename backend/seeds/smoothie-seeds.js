@@ -65,7 +65,7 @@ const smoothieData = [
     fat: 2,
     carbohydrates: 53,
     protein: 16,
-    price: 11.00
+    price: 9.00
   },
   {
     smoothie_name: 'Strawberry Lean',
@@ -75,7 +75,7 @@ const smoothieData = [
     fat: 4,
     carbohydrates: 17,
     protein: 21,
-    price: 11.00
+    price: 9.00
   },
   {
     smoothie_name: 'Tropical Shredder',
@@ -85,7 +85,7 @@ const smoothieData = [
     fat: 10,
     carbohydrates: 24,
     protein: 22,
-    price: 11.00
+    price: 9.00
   },
   {
     smoothie_name: 'PB Cup Lite',
@@ -95,7 +95,7 @@ const smoothieData = [
     fat: 6,
     carbohydrates: 28,
     protein: 27,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -108,7 +108,7 @@ const smoothieData = [
     fat: 22,
     carbohydrates: 31,
     protein: 50,
-    price: 11.00
+    price: 9.00
   },
   {
     smoothie_name: 'The Caffeinator',
@@ -118,7 +118,7 @@ const smoothieData = [
     fat: 5,
     carbohydrates: 25,
     protein: 32,
-    price: 11.00
+    price: 9.00
   },
   {
     smoothie_name: 'Chocolate Thinny Mint',
@@ -128,7 +128,7 @@ const smoothieData = [
     fat: 7,
     carbohydrates: 33,
     protein: 31,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -146,7 +146,7 @@ const smoothieData = [
     fat: 2,
     carbohydrates: 54,
     protein: 21,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -157,7 +157,7 @@ const smoothieData = [
     fat: 4.5,
     carbohydrates: 49,
     protein: 21,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -170,7 +170,7 @@ const smoothieData = [
     fat: 2.5,
     carbohydrates: 55,
     protein: 22,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -181,7 +181,7 @@ const smoothieData = [
     fat: 4.5,
     carbohydrates: 51,
     protein: 23,
-    price: 11.00
+    price: 9.00
   },
 
   // used I love veggies
@@ -193,7 +193,7 @@ const smoothieData = [
     fat: 4,
     carbohydrates: 51,
     protein: 22,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -205,7 +205,7 @@ const smoothieData = [
     fat: 12,
     carbohydrates: 32,
     protein: 39,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -216,7 +216,7 @@ const smoothieData = [
     fat: 6,
     carbohydrates: 44,
     protein: 28,
-    price: 11.00
+    price: 9.00
   },
 
   //   cant find
@@ -224,7 +224,7 @@ const smoothieData = [
     smoothie_name: 'Peaches N Cream',
     description: "Peaches, Pears, Apricots, Strawberries & Banana with Vanilla Whey Protein",
     image: "https://imgur.com/T0SAHdX.jpg",
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -237,7 +237,7 @@ const smoothieData = [
     fat: 4.5,
     carbohydrates: 40,
     protein: 29,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -250,7 +250,7 @@ const smoothieData = [
     fat: 10,
     carbohydrates: 13,
     protein: 39,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -261,7 +261,7 @@ const smoothieData = [
     fat: 10,
     carbohydrates: 13,
     protein: 39,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -275,7 +275,7 @@ const smoothieData = [
     fat: 14,
     carbohydrates: 57,
     protein: 38,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -288,7 +288,7 @@ const smoothieData = [
     fat: 9,
     carbohydrates: 25,
     protein: 37,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -301,7 +301,7 @@ const smoothieData = [
     fat: 22,
     carbohydrates: 34,
     protein: 49,
-    price: 11.00
+    price: 9.00
   },
 
   // banana nut blast
@@ -313,7 +313,7 @@ const smoothieData = [
     fat: 22,
     carbohydrates: 31,
     protein: 50,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -324,7 +324,7 @@ const smoothieData = [
     fat: 21,
     carbohydrates: 85,
     protein: 32,
-    price: 11.00
+    price: 9.00
   },
 
   {
@@ -335,7 +335,7 @@ const smoothieData = [
     fat: 22,
     carbohydrates: 31,
     protein: 50,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -348,7 +348,7 @@ const smoothieData = [
     fat: 7,
     carbohydrates: 28,
     protein: 41,
-    price: 11.00
+    price: 9.00
   },
 
   // no idea what to use used just random fill in data
@@ -360,7 +360,7 @@ const smoothieData = [
     fat: 10,
     carbohydrates: 13,
     protein: 39,
-    price: 11.00
+    price: 9.00
   },
 
 
@@ -369,15 +369,23 @@ const smoothieData = [
     smoothie_name: 'The amazing Acai Bowl',
     description: "Mixed Berries & Acai blended with Yogurt & topped with Banana, Coconut, Cacao Nibs, Berry Coconut Granola, Almond Butter",
     image: "https://i.imgur.com/jcMeFgA.jpg",
-    price: 10.00
+    calories: 520,
+    fat: 10,
+    carbohydrates: 35,
+    protein: 19,
+    price: 11.00
 
   },
 
   {
     smoothie_name: 'The Tropical Veggie Bliss Bowl',
     description: "Mangoes, Pineapple, Kale, Spinach & Lemon blended with Yogurt & topped with Banana, Coconut",
-    image: "https://i.imgur.com/jcMeFgA.jpg",
-    price: 10.00
+    image: "https://i.imgur.com/jcMeFgA.jpg", 
+    calories: 520,
+    fat: 10,
+    carbohydrates: 35,
+    protein: 19,
+    price: 11.00
 
   },
 ];

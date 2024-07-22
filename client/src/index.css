@@ -20,7 +20,7 @@ body {
 
 }
 
-/* Typography */
+/* Typography */ 
 
 h1 {
   font-size: 3rem;
@@ -70,9 +70,13 @@ a:hover {
   color: var(--primary-color);
 }
 
-header {
+header { 
+  
   background-color: var(--white);
-  box-shadow: 0 4px 7px rgba(0, 0, 0, .5);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, .5); 
+  position: sticky; 
+  top: 0;
+  z-index: 9;
 }
 
 

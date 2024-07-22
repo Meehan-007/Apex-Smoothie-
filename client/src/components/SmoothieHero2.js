@@ -10,9 +10,9 @@ import { useCart } from '../contexts/CartContext';
 const HeroCover2 = () => {
 
   const smoothieOfTheMonth = {
-    id: 26,
-    price: "11",
-    smoothie_name: "Peanut Butter"
+    id: 23,
+    price: "9",
+    smoothie_name: "PB&JO"
   }
 
 
@@ -34,7 +34,7 @@ const HeroCover2 = () => {
     <section className="space_center col-10 w-75 margin-top-XXL">
       <ToastContainer />
       <div className=" colcenter w-50 col TabletL-w-90">
-        <h1> Smoothie of the Month </h1>
+        <h1> The best seller PB&JO </h1>
         <img className='portrait web-none tablet-show margin-top-M w-100 imagecrop' src={hero} alt="smoothie of the month" />
         <p className='margin-top-M'> Our delicious peanut butter smoothie is made with your choice of liquid, blended with fresh strawberries, creamy peanut butter, and vanilla protein. It's a perfect balance of sweet and savory,
           and provides a healthy and satisfying treat any time of day. </p>
