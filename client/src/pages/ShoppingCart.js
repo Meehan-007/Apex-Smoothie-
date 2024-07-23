@@ -28,6 +28,11 @@ const ShoppingCart = (props) => {
       .then(({ clientSecret }) => setClientSecret(clientSecret));
   }, [state.total]);
 
+  //  useEffect(() => { 
+  //     localStorage
+  //     .setItem('cart', JSON.stringify(state.cart));
+  //     console.log('cart', state.cart);
+  //   }, [state.cart]);
 
   const handleDeleteItem = (smoothie) => {
 

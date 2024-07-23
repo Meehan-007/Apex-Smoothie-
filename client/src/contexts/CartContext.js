@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const calculateTotal = (cart) => cart.reduce((accumulator, item) => accumulator + Math.round(parseFloat(item.price) * 100), 0);
-
+localStorage.setItem('cart', JSON.stringify(initialState.cart));
 
 
 // Create the context

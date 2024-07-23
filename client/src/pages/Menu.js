@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useRef } from 'react';
 
-
 import SmoothieCards from '../components/SmoothieCard'
 import SmoothieCover2 from '../assests/SmoothieCover2.jpeg'
 import SecondaryNavigation from '../components/SecondaryNavigation'
@@ -28,6 +27,11 @@ console.log(API_URL);
       })
       .catch(err => console.error(err));
   }, []);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   const IcedRefreshersRef = useRef(null);
   const LightIntensityRef = useRef(null);
