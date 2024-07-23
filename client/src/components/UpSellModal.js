@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
-import {Modal, Button, Form} from 'react-bootstrap';
+import {Modal, Button, Form} from 'react-bootstrap'; 
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UpSellModal = ({ show, handleClose, handleConfirmAddOns }) => {
     const [addOns, setAddOns] = useState({
@@ -27,7 +28,7 @@ const UpSellModal = ({ show, handleClose, handleConfirmAddOns }) => {
     return (
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add to Cart</Modal.Title>
+          <Modal.Title> Do you want any add ons? </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -70,7 +71,7 @@ const UpSellModal = ({ show, handleClose, handleConfirmAddOns }) => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cancel order
           </Button>
           <Button variant="primary" onClick={handleConfirm}>
             Add to Cart
