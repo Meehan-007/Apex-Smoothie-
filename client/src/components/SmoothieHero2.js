@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import hero from '../assests/PBJ2.jpg'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from '../contexts/CartContext';
@@ -40,7 +41,8 @@ const HeroCover2 = () => {
     const finalSmoothie = {
       ...smoothie,
       price: parseFloat(smoothie.price) + totalAddOnPrice,
-      addOns,
+      addOns, 
+      uniqueId: uuidv4(),
     };
 
     dispatch({ type: 'ADD_TO_CART', payload: finalSmoothie });

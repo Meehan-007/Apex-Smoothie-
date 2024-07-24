@@ -22,9 +22,8 @@ const cartReducer = (state, action) => {
       console.log('we added to the cart')
       const addedCart = [...state.cart, action.payload];
       return { ...state, cart: addedCart, total: calculateTotal(addedCart) };
-    case 'REMOVE_FROM_CART':
-      const removedCart = state.cart.filter(item => item.id !== action.payload.id) 
-      // use find and splice to remove the first instance 
+    case 'REMOVE_FROM_CART': 
+    const removedCart = state.cart.filter(item => item.uniqueId !== action.payload.uniqueId);
       return { ...state, cart: removedCart, total: calculateTotal(removedCart) };
     default:
       return state;
