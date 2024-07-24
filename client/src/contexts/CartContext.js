@@ -1,11 +1,13 @@
-// CartContext.js
-import { createContext, useReducer, useContext } from 'react';
+
+import { createContext, useReducer, useContext, useEffect } from 'react';
 
 // Define the initial state
 const initialState = {
-  cart: [],
-  total: 0
+  cart: JSON.parse(localStorage.getItem('cart')) || [],
+  total: parseFloat(localStorage.getItem('total')) || 0
 };
+
+
 
 const calculateTotal = (cart) => cart.reduce((accumulator, item) => accumulator + Math.round(parseFloat(item.price) * 100), 0);
 
@@ -21,19 +23,28 @@ const cartReducer = (state, action) => {
     case 'ADD_TO_CART':
       console.log('we added to the cart')
       const addedCart = [...state.cart, action.payload];
-      return { ...state, cart: addedCart, total: calculateTotal(addedCart) };
-    case 'REMOVE_FROM_CART':
-      const removedCart = state.cart.filter(item => item.id !== action.payload.id) 
-      // use find and splice to remove the first instance 
-      return { ...state, cart: removedCart, total: calculateTotal(removedCart) };
+      return { ...state, cart: addedCart, total: calculateTotal(addedCart) }; 
+    case 'REMOVE_FROM_CART': 
+    const removedCart = state.cart.filter(item => item.uniqueId !== action.payload.uniqueId); 
+    
+      return { ...state, cart: removedCart, total: calculateTotal(removedCart) }; 
+      
     default:
       return state;
+      
   }
 };
+
+
 
 // Create the CartProvider component
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(state.cart));
+    localStorage.setItem('total', state.total.toString());
+  }, [state.cart, state.total]);
 
   return (
     <CartContext.Provider value={{ state, dispatch }}>

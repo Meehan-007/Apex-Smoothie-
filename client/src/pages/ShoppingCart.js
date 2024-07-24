@@ -30,7 +30,7 @@ const ShoppingCart = (props) => {
 
 
   const handleDeleteItem = (smoothie) => {
-
+    console.log('smoothie id', smoothie);
     dispatch({ type: 'REMOVE_FROM_CART', payload: smoothie })
   };
 

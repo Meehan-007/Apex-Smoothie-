@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import cover from '../assests/HomeCover.JPG'
-
-
 import SmoothieCards from '../components/SmoothieCard'
 
 
@@ -35,7 +33,7 @@ const Home = () => {
 
       <div>
         <img className="backgroundcover" src={cover} alt="cover" />
-        {/* <Link to="/signup"> <button className='buttonLarge'>  Sign Up </button> </Link>  */}
+      
       </div>
 
       <section className='space_center col pagemarginleft pagemarginright pagemarginleft-tablet pagemarginright-tablet marginreset '>

@@ -34,6 +34,7 @@ import SmoothieInfo from './pages/SmoothieInfo';
 function App() {
 
   const [stripePromise, setStripePromise] = useState(null);
+ 
 
   useEffect(() => {
 
